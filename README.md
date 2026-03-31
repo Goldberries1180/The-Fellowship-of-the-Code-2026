@@ -17,6 +17,8 @@ The Fellowship of the Code – A Developer's Tale
 ***
 
 # Purpose of The Fellowship Companion (TFC)
+`adapt to project`
+
 We are 5 hobbits on our great journey from the Shire to Mordor. Along the way, we need a system to support our planning, decisions, communication, and survival.  
 The Fellowship Companion is a evolving digital tool we build together. It is not perfect, it is not finished - it evolves as we travel.
 
@@ -44,7 +46,7 @@ The Fellowship Companion is a evolving digital tool we build together. It is not
 ***
 
 # Key Features of The Fellowship Companion
-Adapt to project... 
+`Adapt to project...`  
 
 - Journey Planning: map tasks, flows, and deadlines
 - Resource Management: track fictional “hobbit resources” (food, supplies, morale)
