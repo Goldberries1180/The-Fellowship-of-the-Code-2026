@@ -57,11 +57,12 @@ The Fellowship Companion is a evolving digital tool we build together. It is not
 ***
 
 # Changelog
-`This is our general changelog (e.g., new chapter contents added, rules changed, or major system revisions).`  
-`Each chapter has its own detailed changelog for chapter-specific updates.`
+`This is our general changelog (e.g., new chapter contents added, rules changed, or major system revisions).` 
 
-Adapt to project...
+`We use simple versioning: v0.x during development, v1.0 marks the first stable, submission-ready state, and subsequent major changes increment to v2.0, v3.0, etc.`  
 
-X
-Y
-Z
+`Each chapter has its own detailed changelog for chapter-specific updates.`  
+
+### v0.1 – Setup
+- Created repository  
+- Defined basic structure (chapters, artifacts)  
