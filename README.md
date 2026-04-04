@@ -37,7 +37,7 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 # Chapters
 
 1. Chapter I - Setting Out  
-*"I will take the Ring, though I do not know the way." - Frodo*
+*"Faithless is he that says farewell when the road darkens."— Gimli*
 
    [Go to Chapter I →](chapters/chapter-1-setting-out.md)
 
