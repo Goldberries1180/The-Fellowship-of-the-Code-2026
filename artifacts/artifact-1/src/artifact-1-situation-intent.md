@@ -118,4 +118,4 @@ The system must allow the group to track their progress toward Mordor: waypoints
 
 ---
 
-*The Fellowship of the Code – 2026*
+*The Goldberries – 2026*
