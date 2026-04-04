@@ -3,7 +3,7 @@
 ## The Fellowship Companion
 The Fellowship of the Code – A Developer's Tale  
 
-`Adapt to project: Add Quote "..." - Character`  
+“I’m going on an adventure!” – Bilbo Baggins
 
 ## Table of Contents
 
@@ -63,6 +63,9 @@ The Fellowship Companion is a evolving digital tool we build together. It is not
 
 `Each chapter has its own detailed changelog for chapter-specific updates.`  
 
+### v0.2 – Setup
+- added quote for readme file
+  
 ### v0.1 – Setup
 - Created repository  
 - Defined basic structure (chapters, artifacts)  
