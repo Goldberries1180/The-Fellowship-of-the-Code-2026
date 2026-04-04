@@ -65,6 +65,7 @@ The Fellowship Companion is a evolving digital tool we build together. It is not
 
 ### v0.2 – Setup
 - added quote for readme file
+- added content for artifact-1
   
 ### v0.1 – Setup
 - Created repository  
