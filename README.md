@@ -16,16 +16,11 @@ The Fellowship of the Code – A Developer's Tale
 
 ***
 
-# Purpose of The Fellowship Companion (TFC)
-`adapt to project`
+We are The Goldberries — 5 hobbits on our great journey from the Shire to Mordor. Along the way, we need a system to support our planning, decisions, coordination, and survival. The Fellowship Companion is an evolving digital tool we build together. It is not perfect, it is not finished — it grows as we travel.
 
-We are 5 hobbits on our great journey from the Shire to Mordor. Along the way, we need a system to support our planning, decisions, communication, and survival.  
-The Fellowship Companion is a evolving digital tool we build together. It is not perfect, it is not finished - it evolves as we travel.
-
-**Who we are:** The Fellowship - a group of 5 hobbits (students) working together.  
-**What we build:** A companion system that helps manage our journey, resources, and tasks.  
-**Why we build it:** So our journey succeeds and we understand the mindset, logic, design, and practice of developers.  
-
+**Who we are:** The Goldberries — a group of 5 hobbits (students) working together.  
+**What we build:** A companion system that helps the Fellowship manage situational awareness, resources, route decisions, and group cohesion across the journey to Mordor.  
+**Why we build it:** So our journey succeeds and we develop the mindset, logic, design, and practice of developers along the way.****
 ***
 
 # Rules of our Journey
