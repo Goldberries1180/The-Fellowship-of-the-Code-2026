@@ -3,7 +3,7 @@
 ## The Fellowship Companion
 The Fellowship of the Code – A Developer's Tale  
 
-“I’m going on an adventure!” – Bilbo Baggins
+"I'm going on an adventure!" – Bilbo Baggins
 
 ## Table of Contents
 
@@ -16,11 +16,14 @@ The Fellowship of the Code – A Developer's Tale
 
 ***
 
+# Purpose of The Fellowship Companion (TFC)
+
 We are The Goldberries — 5 hobbits on our great journey from the Shire to Mordor. Along the way, we need a system to support our planning, decisions, coordination, and survival. The Fellowship Companion is an evolving digital tool we build together. It is not perfect, it is not finished — it grows as we travel.
 
 **Who we are:** The Goldberries — a group of 5 hobbits (students) working together.  
 **What we build:** A companion system that helps the Fellowship manage situational awareness, resources, route decisions, and group cohesion across the journey to Mordor.  
-**Why we build it:** So our journey succeeds and we develop the mindset, logic, design, and practice of developers along the way.****
+**Why we build it:** So our journey succeeds and we develop the mindset, logic, design, and practice of developers along the way.
+
 ***
 
 # Rules of our Journey
@@ -34,20 +37,19 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 # Chapters
 
 1. Chapter I - Setting Out  
-*“I will take the Ring, though I do not know the way.” - Frodo*
+*"I will take the Ring, though I do not know the way." - Frodo*
 
    [Go to Chapter I →](chapters/chapter-1-setting-out.md)
 
 ***
 
 # Key Features of The Fellowship Companion
-`Adapt to project...`  
 
-- Journey Planning: map tasks, flows, and deadlines
-- Resource Management: track fictional “hobbit resources” (food, supplies, morale)
-- Decision Support: flows and logic for key choices on the journey
-- Communication: share work, reflections, and AI learnings
-- Versioned & Evolving: artifacts build on each other, tracked in The Red Book
+- **Situational Awareness:** Know where the group is, who is with who, and how the Fellowship is holding together
+- **Resource Management:** Track food, water, and supplies — and plan before they run out
+- **Route Decision Support:** Compare options, document trade-offs, and make informed choices together
+- **Task & Responsibility Tracking:** Assign duties, avoid gaps, and keep everyone accountable
+- **Journey Progress:** Stay oriented toward Mordor and maintain a shared sense of how far you've come
 
 ***
 
