@@ -60,7 +60,8 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 
 ### v0.2 – Setup
 - added quote for readme file
-- added content for artifact-1
+- added artifact-1
+- added content for readme file
   
 ### v0.1 – Setup
 - Created repository  
