@@ -1,7 +1,5 @@
 # The Fellowship Companion – Artifact I: Situation & Intent
 
-*"I will take the Ring, though I do not know the way." — Frodo Baggins, The Fellowship of the Ring*
-
 ---
 
 ## Table of Contents
