@@ -12,7 +12,7 @@
 
 ---
 
-### Summary
+## Summary
 
 This chapter documents the creation of the first foundation for *The Fellowship Companion*.
 
@@ -23,7 +23,7 @@ We identified three challenges:
 - Resource pressure  
 - Group coordination  
 
-### Learning Outcomes
+**Learning Outcomes**
 
 In this chapter, we learnt how to clearly distinguish between **situation, intent and value** when defining the foundations of a software system.
 
@@ -33,11 +33,11 @@ Overall, this phase improved our ability to document reasoning and align within 
 
 ---
 
-### Artifact
+## Artifact
 
 **[The Fellowship Companion – Artifact I: Situation & Intent](https://github.com/Goldberries1180/The-Fellowship-of-the-Code-2026/blob/main/artifacts/artifact-1/src/artifact-1-situation-intent.md)**
 
-### Build
+**Build**
 
 We created a structured conceptual artifact describing:
 
@@ -50,7 +50,7 @@ We created a structured conceptual artifact describing:
 - A first set of system capabilities derived from the problem  
 - Key assumptions and constraints shaping the system  
 
-### Focus
+**Focus**
 
 - Understanding the real problem before designing solutions  
 - Structuring complexity into clear categories  
@@ -62,17 +62,17 @@ We created a structured conceptual artifact describing:
 
 AI was used for structuring and formulation, but not for defining core concepts.
 
-#### What did we expect?
+**What did we expect?**
 
 We expected AI to help with wording, structure, and clarity once the core ideas were defined, but not to define the conceptual content itself.
 
-#### What actually happened?
+**What actually happened?**
 
 AI was helpful in refining formulations and improving readability.
 
 However, it occasionally mixed intent and value or introduced narrative elements that did not fit the structured nature of the assignment.
 
-#### How did AI help or mislead us?
+**How did AI help or mislead us?**
 
 **Helpful:**
 - Improved clarity and precision of descriptions  
@@ -84,34 +84,34 @@ However, it occasionally mixed intent and value or introduced narrative elements
 - Occasionally added LOTR story details that were irrelevant  
 - Required careful review to avoid vague or generic statements  
 
-#### What decisions did we make consciously?
+**What decisions did we make consciously?**
 
 - AI was used only after the conceptual structure was defined manually  
 - All AI-generated text was reviewed and adjusted  
 
-#### What would we do differently next time?
+**What would we do differently next time?**
 
 - Provide AI with stricter constraints earlier  
 - Use AI more selectively for micro tasks  
 
 ---
 
-### Lessons Learned
+## Lessons Learned
 
-#### Insights
+**Insights**
 
 - The distinction between intent and value is subtle but essential:
   - **Intent** → what the system enables  
   - **Value** → why that matters  
 - Conceptual clarity early on prevents misalignment later.
 
-#### Challenges
+**Challenges**
 
 - The task initially felt overwhelming due to many new concepts  
 - Familiarity with LOTR made abstraction harder  
 - Team alignment required discussion and iteration  
 
-#### Reflections
+**Reflections**
 
 - Focus on the **problem structure**, not the story  
 - Establish shared understanding early  
