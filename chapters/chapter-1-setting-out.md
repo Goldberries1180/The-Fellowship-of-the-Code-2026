@@ -1,4 +1,4 @@
-# The Red Book of Westmarch
+# The Red Book of Westmarch - Chapter I: Setting Out
 
 > “I am going on an adventure” – Bilbo Baggins
 
@@ -14,8 +14,6 @@
 
 ---
 
-## The Red Book of Westmarch - Chapter I: Setting Out
-
 ### Summary
 
 This chapter documents the creation of the first foundation for *The Fellowship Companion*.
@@ -26,8 +24,6 @@ We identified three challenges:
 - Route uncertainty  
 - Resource pressure  
 - Group coordination  
-
----
 
 ### Learning Outcomes
 
@@ -41,9 +37,7 @@ Overall, this phase improved our ability to document reasoning and align within 
 
 ### Artifact
 
-**[The Fellowship Companion – Artifact I: Situation & Intent](../artifacts/artifact-1/Artifact-1-Situation-and-Intent.md)**
-
----
+**[The Fellowship Companion – Artifact I: Situation & Intent](https://github.com/Goldberries1180/The-Fellowship-of-the-Code-2026/blob/main/artifacts/artifact-1/src/artifact-1-situation-intent.md)**
 
 ### Build
 
@@ -57,8 +51,6 @@ We created a structured conceptual artifact describing:
   (reducing avoidable failure)  
 - A first set of system capabilities derived from the problem  
 - Key assumptions and constraints shaping the system  
-
----
 
 ### Focus
 
@@ -82,8 +74,6 @@ AI was helpful in refining formulations and improving readability.
 
 However, it occasionally mixed intent and value or introduced narrative elements that did not fit the structured nature of the assignment.
 
----
-
 #### How did AI help or mislead us?
 
 **Helpful:**
@@ -96,14 +86,10 @@ However, it occasionally mixed intent and value or introduced narrative elements
 - Occasionally added LOTR story details that were irrelevant  
 - Required careful review to avoid vague or generic statements  
 
----
-
 #### What decisions did we make consciously?
 
 - AI was used only after the conceptual structure was defined manually  
 - All AI-generated text was reviewed and adjusted  
-
----
 
 #### What would we do differently next time?
 
@@ -121,15 +107,11 @@ However, it occasionally mixed intent and value or introduced narrative elements
   - **Value** → why that matters  
 - Conceptual clarity early on prevents misalignment later.
 
----
-
 #### Challenges
 
 - The task initially felt overwhelming due to many new concepts  
 - Familiarity with LOTR made abstraction harder  
 - Team alignment required discussion and iteration  
-
----
 
 #### Reflections
 
