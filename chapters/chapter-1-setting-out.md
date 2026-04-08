@@ -1,10 +1,8 @@
 # The Red Book of Westmarch - Chapter I: Setting Out
 
-> “I am going on an adventure” – Bilbo Baggins
+“I am going on an adventure” – Bilbo Baggins
 
----
-
-## Table of Contents
+**Table of Contents**
 
 - [The Red Book of Westmarch - Chapter I: Setting Out](#the-red-book-of-westmarch---chapter-i-setting-out)
   - [Summary](#summary)
