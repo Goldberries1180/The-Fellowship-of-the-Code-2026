@@ -1,6 +1,6 @@
 # The Red Book of Westmarch - Chapter I: Setting Out
 
-“I am going on an adventure” – Bilbo Baggins
+“*I am going on an adventure*” – Bilbo Baggins
 
 **Table of Contents**
 
@@ -116,3 +116,7 @@ However, it occasionally mixed intent and value or introduced narrative elements
 - Focus on the **problem structure**, not the story  
 - Establish shared understanding early  
 - Confusion at the beginning is part of the process  
+
+---
+
+*The Goldberries – 2026*
