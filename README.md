@@ -69,6 +69,6 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 - Created repository  
 - Defined basic structure (chapters, artifacts)
 
-## v1.0 
+### v1.0 - Final Version
 - added "*Chapter 1: Setting Out*" of the Red Book of Westmarch
-- The entire work package for the concept is complete
+- "*Artifact I: Situation & Intent*" and "*Chapter 1: Setting Out*" of the Red Book of Westmarch are complete
