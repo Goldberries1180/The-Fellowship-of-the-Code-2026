@@ -3,7 +3,7 @@
 ## The Fellowship Companion
 The Fellowship of the Code – A Developer's Tale  
 
-"I'm going on an adventure!" – Bilbo Baggins
+"*I'm going on an adventure!*" – Bilbo Baggins
 
 ## Table of Contents
 
@@ -37,7 +37,7 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 # Chapters
 
 1. Chapter I - Setting Out  
-*"Faithless is he that says farewell when the road darkens."— Gimli*
+*"Faithless is he that says farewell when the road darkens.*"— Gimli
 
    [Go to Chapter I →](chapters/chapter-1-setting-out.md)
 
@@ -67,4 +67,8 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
   
 ### v0.1 – Setup
 - Created repository  
-- Defined basic structure (chapters, artifacts)  
+- Defined basic structure (chapters, artifacts)
+
+## v1.0 
+- added "*Chapter 1: Setting Out*" of the Red Book of Westmarch
+- The entire work package for the concept is complete
