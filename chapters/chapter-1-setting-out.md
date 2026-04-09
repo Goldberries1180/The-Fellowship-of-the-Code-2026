@@ -74,12 +74,12 @@ However, it occasionally mixed intent and value or introduced narrative elements
 
 **How did AI help or mislead us?**
 
-**Helpful:**
+**Helpful**
 - Improved clarity and precision of descriptions  
 - Supported structuring the artifact  
 - Helped transform rough notes into coherent text  
 
-**Misleading:**
+**Misleading**
 - Sometimes blurred conceptual boundaries (intent vs. value)  
 - Occasionally added LOTR story details that were irrelevant  
 - Required careful review to avoid vague or generic statements  
