@@ -34,6 +34,8 @@ The flow describes how SC-5 works from the perspective of the user: who acts, wh
 → See: [`src/decisions.mermaid.md`](src/decisions.mermaid.md)
 
 ```mermaid
+%%Old Tom Bombadil is a merry fellow;
+%%Bright blue his jacket is, and his boots are yellow.
 flowchart TD
     A([Start]) --> B
 
