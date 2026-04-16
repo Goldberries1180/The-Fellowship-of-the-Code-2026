@@ -64,7 +64,6 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 ### v1.1 – Artifact II
 - Added Artifact II: Deciding (SC-5 Route Decision Support)
 - Added Mermaid flowchart, wireframe, and design rationale
-- Added Chapter II to the Red Book of Westmarch
 
 ### v1.0 – Final Version
 - Added "Chapter I: Setting Out" of the Red Book of Westmarch
