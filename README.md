@@ -54,21 +54,27 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 ***
 
 # Changelog
-`This is our general changelog (e.g., new chapter contents added, rules changed, or major system revisions).` 
 
-`We use simple versioning: v0.x during development, v1.0 marks the first stable, submission-ready state, and subsequent major changes increment to v2.0, v3.0, etc.`  
+`This is our general changelog (e.g., new chapter contents added, rules changed, or major system revisions).`
 
-`Each chapter has its own detailed changelog for chapter-specific updates.`  
+`We use simple versioning: v0.x during development, v1.0 marks the first stable, submission-ready state, and subsequent major changes increment to v2.0, v3.0, etc.`
+
+`Each chapter has its own detailed changelog for chapter-specific updates.`
+
+### v1.1 – Artifact II
+- Added Artifact II: Deciding (SC-5 Route Decision Support)
+- Added Mermaid flowchart, wireframe, and design rationale
+- Added Chapter II to the Red Book of Westmarch
+
+### v1.0 – Final Version
+- Added "Chapter I: Setting Out" of the Red Book of Westmarch
+- "Artifact I: Situation & Intent" and "Chapter I: Setting Out" are complete
 
 ### v0.2 – Setup
-- added quote for readme file
-- added artifact-1
-- added content for readme file
-  
-### v0.1 – Setup
-- Created repository  
-- Defined basic structure (chapters, artifacts)
+- Added quote for readme file
+- Added Artifact I
+- Added content for readme file
 
-### v1.0 - Final Version
-- added "*Chapter 1: Setting Out*" of the Red Book of Westmarch
-- "*Artifact I: Situation & Intent*" and "*Chapter 1: Setting Out*" of the Red Book of Westmarch are complete
+### v0.1 – Setup
+- Created repository
+- Defined basic structure (chapters, artifacts)
