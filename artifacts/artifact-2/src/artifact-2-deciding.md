@@ -39,7 +39,7 @@ The flow describes how SC-5 works from the perspective of the user: who acts, wh
 flowchart TD
     A([Start]) --> B
 
-    B["Member initiates route decision<br>Names options, adds known risks"]
+    B["Member initiates route decision<br>Names options, criticality, adds known risks"]
     B --> C
 
     C["System validates input<br>Checks: ≥2 options, source tagged"]
