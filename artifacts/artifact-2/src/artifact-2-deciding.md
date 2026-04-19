@@ -96,7 +96,7 @@ flowchart TD
 
 The wireframe shows four screens representing the full interaction flow: initiating a decision, casting a vote, waiting for others, and viewing the outcome.
 
-→ See: [`src/wireframe.png`](wireframe.png)
+→ See: [`src/wireframe.png`](decisions.png)
 
 **Screen 1 – New route decision (Initiator)**
 The member who initiates the decision names the options, the criticality, documents known risks, and tags a source for each. The source field is a dropdown limited to Fellowship members — not free text. Once at least two options are defined and all source fields are filled, the decision can be sent to the group.
