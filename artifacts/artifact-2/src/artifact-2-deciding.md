@@ -110,6 +110,9 @@ After submitting a vote, the member sees their own choice confirmed and a live c
 **Screen 4 – Outcome**
 Once the vote closes, all members see the result: the winning route, the vote split, and the losing option for reference. The outcome is logged in the journey record.
 
+**Bottom Navigation**
+Has been intentionally filled with "placeholder" icons and do not represent the final design or layout.
+
 ---
 
 ## 4. Design Rationale
