@@ -99,13 +99,13 @@ The wireframe shows four screens representing the full interaction flow: initiat
 → See: [`src/wireframe.png`](wireframe.png)
 
 **Screen 1 – New route decision (Initiator)**
-The member who initiates the decision names the options, documents known risks, and tags a source for each. The source field is a dropdown limited to Fellowship members — not free text. Once at least two options are defined and all source fields are filled, the decision can be sent to the group.
+The member who initiates the decision names the options, the criticality, documents known risks, and tags a source for each. The source field is a dropdown limited to Fellowship members — not free text. Once at least two options are defined and all source fields are filled, the decision can be sent to the group.
 
 **Screen 2 – Route decision (Voter)**
 All notified members see the same screen: the question, the options with their risks and sources, and a comment field. Members select an option and optionally add their reasoning before submitting. The screen shows who has already voted, but not the current result.
 
 **Screen 3 – Waiting**
-After submitting a vote, the member sees their own choice confirmed and a live count of how many members have responded. The result is not shown until the vote closes.
+After submitting a vote, the member sees their own choice confirmed and a live count of how many members have responded and how much time is remaining to vote. The result is not shown until the vote closes.
 
 **Screen 4 – Outcome**
 Once the vote closes, all members see the result: the winning route, the vote split, and the losing option for reference. The outcome is logged in the journey record.
