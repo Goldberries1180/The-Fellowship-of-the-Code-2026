@@ -60,6 +60,9 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 `We use simple versioning: v0.x during development, v1.0 marks the first stable, submission-ready state, and subsequent major changes increment to v2.0, v3.0, etc.`
 
 `Each chapter has its own detailed changelog for chapter-specific updates.`
+### v1.2. - Artifact II
+- Updated the wireframe after group discussion
+- Changed the mermaid to reflect the changes in the wireframe
 
 ### v1.1 – Artifact II
 - Added Artifact II: Deciding (SC-5 Route Decision Support)
