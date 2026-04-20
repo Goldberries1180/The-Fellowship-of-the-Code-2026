@@ -57,20 +57,20 @@ Four wireframes were necessary — the feature has four distinct states, and eac
 
 ### AI Assistance  
 
-AI was used to support the technical creation of the flow diagram, but not to define its logic.  
+AI was used to support the technical creation of the flow diagram and for inspiration when working on the wireframes.
 
 **What did we expect?**  
-We expected AI to help with Mermaid syntax while keeping all flow logic and structure defined by us.  
+We expected AI to help with Mermaid syntax and deliver inspiration while keeping all flow logic, structure and decisions on our side.  
 
 **What actually happened?**  
-AI was used exclusively to assist with the flow diagram. It helped generate Mermaid code, which accelerated the process.
-Because we had already familiarised ourselves with Mermaid syntax beforehand, we were able to review, debug, and correct the output effectively. The actual flow logic was fully defined by the team. Wireframes were created in Figma without any AI support.  
+AI was used to assist with the flow diagram. It helped generate Mermaid code, which accelerated the process. Because we had already familiarised ourselves with Mermaid syntax beforehand, we were able to review, debug, and correct the output effectively. AI was also used for initial inspiration during the wireframe design process.  
 
 **How did AI help or mislead us?**  
 
 **Helpful**  
 - Accelerated the generation of Mermaid syntax and reduced time on formatting
 - Provided a working starting point that could be corrected rather than built from scratch
+- Provided visual inspiration and starting points for the wireframe design  
 
 **Misleading**  
 - AI filled ambiguous gaps silently — it did not flag uncertainty, which required careful manual review to catch
@@ -78,9 +78,9 @@ Because we had already familiarised ourselves with Mermaid syntax beforehand, we
 
 **What decisions did we make consciously?**  
 - AI was used only for technical assistance in flowchart creation — not for defining logic or structure
-- The interaction flow and all decision rules were defined entirely by the team
-- Wireframing was done in Figma without AI to retain full control over design decisions
 - All generated Mermaid code was manually reviewed and corrected before use
+- The interaction flow and all decision rules were defined entirely by the team
+- Wireframing was done manually in Figma to retain full control over design decisions
 
 **What would we do differently next time?**  
 - Define the full flow logic by hand sketches before generating any diagram code — AI performs better with a fully specified input
