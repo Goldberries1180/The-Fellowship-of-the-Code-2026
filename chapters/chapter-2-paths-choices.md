@@ -71,20 +71,19 @@ Because we had already familiarised ourselves with Mermaid syntax beforehand, we
 **Helpful**  
 - Accelerated the generation of Mermaid syntax and reduced time on formatting
 - Provided a working starting point that could be corrected rather than built from scratch
-- Reduced friction for an unfamiliar syntax
 
 **Misleading**  
 - AI filled ambiguous gaps silently — it did not flag uncertainty, which required careful manual review to catch
 - AI used outdated or incorrect Mermaid syntax, which required manual correction
 
 **What decisions did we make consciously?**  
-- AI was used only for technical assistance in flowchart creation — never for defining logic or structure
+- AI was used only for technical assistance in flowchart creation — not for defining logic or structure
 - The interaction flow and all decision rules were defined entirely by the team
 - Wireframing was done in Figma without AI to retain full control over design decisions
 - All generated Mermaid code was manually reviewed and corrected before use
 
 **What would we do differently next time?**  
-- Define the full flow logic before generating any diagram code — AI performs better with a fully specified input
+- Define the full flow logic by hand sketches before generating any diagram code — AI performs better with a fully specified input
 
 ---
 
@@ -93,12 +92,11 @@ Because we had already familiarised ourselves with Mermaid syntax beforehand, we
 **Insights**
 - A clear conceptual foundation makes translating into interaction significantly easier — ambiguities that survive Chapter I are exposed in Chapter II
 - Drawing a flow by hand is faster and more productive than working directly in Mermaid; sketching reveals structure, Mermaid enforces syntax
-- The appropriate level of detail in a wireframe is not obvious; it must be decided intentionally and defended
-- Delivering multiple wireframes was a conscious and justified choice — one screen cannot represent a multi-state feature
+- The appropriate level of detail in a wireframe is not obvious
+- Delivering multiple wireframes was a conscious and justified choice — one screen can hardly represent a multi-state feature
 
 **Challenges**
 - Determining the right level of wireframe detail — too rough loses meaning, too polished wastes time
-- Figma was new to the team, which raised the barrier to iteration and slowed down the design process
 - Defining how far to scope the content was harder than expected
 - Work distribution was difficult due to overlapping and interdependent tasks
 
