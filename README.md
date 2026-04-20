@@ -37,9 +37,14 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 # Chapters
 
 1. Chapter I - Setting Out  
-*"Faithless is he that says farewell when the road darkens.*"— Gimli
+*"Faithless is he that says farewell when the road darkens."*— Gimli
 
    [Go to Chapter I →](chapters/chapter-1-setting-out.md)
+
+2. Chapter II - Paths & Choices
+*“All we have to decide is what to do with the time that is given us.”*-Gandalf
+
+   [Go to Chapter II →](chapters/chapter-2-paths-choices.md)
 
 ***
 
