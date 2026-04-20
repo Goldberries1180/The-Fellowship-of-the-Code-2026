@@ -12,16 +12,14 @@
 
 ## Summary
 
-This chapter translates the conceptual foundation from Chapter I into a concrete interaction design.
-The focus was on one selected capability — SC-5: Route Decision Support — and how it can be expressed through a structured flow and screens. The goal was to make one capability operational: giving the Fellowship a structured way to decide together.
+This chapter reflects how we translated the conceptual foundation from Chapter I into a concrete interaction design.
+The focus was on one selected capability — SC-5: Route Decision Support — and how it can be expressed through a structured flow and screens.
 
 Wireframes and a flow diagram represent the full interaction — from initiating a decision to recording the outcome. Defining the system behaviour in full made the complexity of the feature tangible in a way the concept alone did not.
 
 **Learning Outcomes**
 
-In this chapter, we learnt how translating a concept into an interaction design surfaces gaps that are invisible at the conceptual level.
-We also reflected on the relationship between tools and thinking: Mermaid enforces precision, Figma rewards familiarity, and both demanded more than expected when approached without prior experience.
-Overall, this phase improved our ability to argue design decisions and align on detail within the team.
+Turning a concept into an interaction design makes visible where decisions still need to be made — and those decisions cannot be delegated. We learnt that wireframe scope needs to be agreed before work starts, not worked out along the way. Tools need to be mastered before the project begins — in this phase, Mermaid. Figma was new to parts of the team, which added coordination overhead that shared tool familiarity would have reduced.
 
 ---
 
