@@ -31,7 +31,7 @@ The Fellowship stands at exactly the kind of decision point SC-5 is built for: t
 
 The flow describes how SC-5 works from the perspective of the user: who acts, what the system responds, and where decisions branch.
 
-→ See: [`src/flow.mermaid.md`](src/flow.mermaid.md)
+→ See: [`src/flow.mermaid.md`](flow.mermaid.md)
 
 ```mermaid
 %%Old Tom Bombadil is a merry fellow;
