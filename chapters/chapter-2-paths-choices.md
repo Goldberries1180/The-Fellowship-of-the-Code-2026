@@ -19,7 +19,7 @@ Wireframes and a flow diagram represent the full interaction — from initiating
 
 **Learning Outcomes**
 
-Turning a concept into an interaction design makes visible where decisions still need to be made — and those decisions cannot be delegated. We learnt that wireframe scope needs to be agreed before work starts, not worked out along the way. Tools need to be mastered before the project begins — in this phase, Mermaid. Figma was new to parts of the team, which added coordination overhead that shared tool familiarity would have reduced.
+Turning a concept into an interaction design makes visible where decisions still need to be made — and those decisions cannot be delegated to AI. We learnt that wireframe scope needs to be agreed before work starts, not worked out along the way. Tools need to be mastered before the work begins — in this phase, Mermaid. Figma was new to parts of the team, which added coordination overhead that shared tool familiarity would have reduced.
 
 ---
 
