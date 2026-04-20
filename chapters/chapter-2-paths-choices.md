@@ -25,7 +25,7 @@ Turning a concept into an interaction design makes visible where decisions still
 
 ## Artifact
 
-**[The fellowhip companion - Artifact II: Deciding](../artifacts/artifact-2/src/artifact-2-deciding.md)**
+**[The Fellowhip Companion - Artifact II: Deciding](../artifacts/artifact-2/src/artifact-2-deciding.md)**
 
 **Build**
 
