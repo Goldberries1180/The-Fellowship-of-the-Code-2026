@@ -47,44 +47,43 @@ Four wireframes were necessary — the feature has four distinct states, and eac
 
 **Focus**
 
-- Turning a concept into a working interaction
-- Designing for group decisions, not individual use
-- Giving structure without taking over the decision
-- Keeping the system in a supporting role, not a judging one
-- Deciding how much detail the wireframes and flow needed
+- Turning a concept into a working interaction  
+- Designing for group decisions, not individual use  
+- Giving structure without taking over the decision  
+- Keeping the system in a supporting role, not a judging one  
+- Deciding how much detail the wireframes and flow needed  
 
 ---
 
-### AI Assistance
+### AI Assistance  
 
-AI was used to support the technical creation of the flow diagram, but not to define its logic.
+AI was used to support the technical creation of the flow diagram, but not to define its logic.  
 
-**What did we expect?**
-We expected AI to help with Mermaid syntax while keeping all flow logic and structure defined by us.
+**What did we expect?**  
+We expected AI to help with Mermaid syntax while keeping all flow logic and structure defined by us.  
 
-**What actually happened?**
+**What actually happened?**  
 AI was used exclusively to assist with the flow diagram. It helped generate Mermaid code, which accelerated the process.
-Because we had already familiarised ourselves with Mermaid syntax beforehand, we were able to review, debug, and correct the output effectively. The actual flow logic was fully defined by the team.
-Wireframes were created in Figma without any AI support.
+Because we had already familiarised ourselves with Mermaid syntax beforehand, we were able to review, debug, and correct the output effectively. The actual flow logic was fully defined by the team. Wireframes were created in Figma without any AI support.  
 
-**How did AI help or mislead us?**
+**How did AI help or mislead us?**  
 
-**Helpful**
+**Helpful**  
 - Accelerated the generation of Mermaid syntax and reduced time on formatting
 - Provided a working starting point that could be corrected rather than built from scratch
 - Reduced friction for an unfamiliar syntax
 
-**Misleading**
+**Misleading**  
 - AI filled ambiguous gaps silently — it did not flag uncertainty, which required careful manual review to catch
 - AI used outdated or incorrect Mermaid syntax, which required manual correction
 
-**What decisions did we make consciously?**
+**What decisions did we make consciously?**  
 - AI was used only for technical assistance in flowchart creation — never for defining logic or structure
 - The interaction flow and all decision rules were defined entirely by the team
 - Wireframing was done in Figma without AI to retain full control over design decisions
 - All generated Mermaid code was manually reviewed and corrected before use
 
-**What would we do differently next time?**
+**What would we do differently next time?**  
 - Define the full flow logic before generating any diagram code — AI performs better with a fully specified input
 
 ---
