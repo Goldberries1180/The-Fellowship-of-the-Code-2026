@@ -25,7 +25,7 @@ Turning a concept into an interaction design makes visible where decisions still
 
 ## Artifact
 
-**[The Fellowship Companion – Artifact II: Wireframe & Interaction Flow]()**
+**[The Fellowship Companion – Artifact II: Deciding](artifacts/artifact-2/src/artifact-2-deciding.md)**
 
 **Build**
 
