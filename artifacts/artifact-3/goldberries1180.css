@@ -1,0 +1,18 @@
+.route-header {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+.route-options {
+    align-items: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 auto 20px;
+}
+.source-select {
+    width: 200px;
+    margin-bottom: 10px;
+}
