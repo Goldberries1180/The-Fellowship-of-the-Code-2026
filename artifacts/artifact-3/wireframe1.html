@@ -2,16 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="goldberries1180.css">
+    <link rel="stylesheet" href="style.css">
     <title>Deciding</title>
 </head>
 <body>
+<header>
 <h1 class="route-header">New Route Decision</h1>
 <h2 class="route-header">Add route option for voting</h2>
-<div class="route-options">
-    <label class="route-label">Option 1<br>
-        <input type="text" placeholder="Route Option 1">
-    </label><br>
+</header>
+<main>
+<form>
+    <label>Who should vote?</label><br>
+    <label><input type="checkbox" name="vote" value="Gandalf">Gandalf</label><br>
+    <label><input type="checkbox" name="vote" value="Frodo">Frodo</label><br>
+    <label><input type="checkbox" name="vote" value="Sam">Sam</label><br>
+    <label><input type="checkbox" name="vote" value="Aragorn">Aragorn</label><br>
+    <label><input type="checkbox" name="vote" value="Legolas">Legolas</label><br>
+    <label><input type="checkbox" name="vote" value="Gimli">Gimli</label><br>
+    <label><input type="checkbox" name="vote" value="Boromir">Boromir</label><br>
+    <label><input type="checkbox" name="vote" value="Pippin">Pippin</label><br>
+    <label><input type="checkbox" name="vote" value="Merry">Merry</label><br>
+    <div class="route-options">
+    <label class="route-label">Option 1<br><input type="text" placeholder="Route Option 1"></label><br>
     <label>Known Risks<br>
         <textarea placeholder="Known Risks"></textarea>
     </label><br>
@@ -25,10 +37,10 @@
             <option value="Gimli">Gimli</option>
             <option value="Boromir">Boromir</option>
             <option value="Pippin">Pippin</option>
-            <option value="Mary">Mary</option>
+            <option value="Merry">Merry</option>
         </select>
     </label><br>
-</div>
+    </div>
 <div class="route-options">
     <label class="route-label">Option 2<br>
         <input type="text" placeholder="Route Option 2">
@@ -46,9 +58,11 @@
             <option value="Gimli">Gimli</option>
             <option value="Boromir">Boromir</option>
             <option value="Pippin">Pippin</option>
-            <option value="Mary">Mary</option>
+            <option value="Merry">Merry</option>
         </select>
     </label><br>
 </div>
+</form>
+</main>
 </body>
 </html>
