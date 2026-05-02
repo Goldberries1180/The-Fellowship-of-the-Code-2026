@@ -14,14 +14,12 @@
 <form>
     <div class="switch-container">
         <img class="info-icon" src="../assets/icons/info_icon.svg" alt="Info to Criticality Selection" title="The vote span for critical votes is 24 hours and everyone is selected to vote">
-        <div class="new-switch">
-            <div class="new-switch__option new-switch__option--active">
-            <span class="new-switch__label">Non-Critical</span>
-            </div>
-            <div class="new-switch__option new-switch__option--inactive">
-            <span class="new-switch__label">Critical</span>
-            </div>
-        </div>
+        <input type="checkbox" id="criticality-toggle" class="switch-toggle">
+        <label class="new-switch" for="criticality-toggle">
+            <span class="new-switch__option new-switch__option--active">Non-Critical</span>
+            <span class="new-switch__option new-switch__option--inactive">Critical</span>
+        </label>
+    </div>
     </div>
     <div class="route-options">
         <label class="card-headline">Who should vote?</label><br>
@@ -90,7 +88,7 @@
 </main>
 <nav class="bottomnav">
     <div class="bottomnav__button is-active">
-        <img src="../assets/icons/compass.svg" alt="Decisions">
+        <img src="../assets/icons/compass_dark.svg" alt="Decisions">
     </div>
     <div class="bottomnav__button">
         <img src="../assets/icons/cube.svg" alt="Settings">
