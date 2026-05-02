@@ -65,6 +65,9 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 `We use simple versioning: v0.x during development, v1.0 marks the first stable, submission-ready state, and subsequent major changes increment to v2.0, v3.0, etc.`
 
 `Each chapter has its own detailed changelog for chapter-specific updates.`
+### v2.1 - css Styles
+- Commited css file
+
 ### v2.0 - Final Version
 - Updated artefact 2 and fixed links
 - Added "Chapter 2: Deciding" of the Red Book of Westmarch
