@@ -14,7 +14,7 @@ body.screen-empty {
 
     background:
         linear-gradient(rgba(26,22,18,0.7), rgba(26,22,18,0.7)),
-        url("../assets/images/Background_1.png");
+        url("../assets/images/Background_1.webp");
 
     background-size: cover;
     background-position: center;
