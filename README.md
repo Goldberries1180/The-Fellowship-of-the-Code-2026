@@ -65,6 +65,16 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 `We use simple versioning: v0.x during development, v1.0 marks the first stable, submission-ready state, and subsequent major changes increment to v2.0, v3.0, etc.`
 
 `Each chapter has its own detailed changelog for chapter-specific updates.`
+
+### v2.2 - css Styles
+- Bugfix background image
+- image format from png to webp for background image
+- img link updated in html file
+  
+### v2.2 - css Styles
+- Added empty view for voting feature
+- updated css file
+  
 ### v2.1 - css Styles
 - Commited css file
 
