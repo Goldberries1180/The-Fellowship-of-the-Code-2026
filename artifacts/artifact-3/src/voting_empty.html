@@ -28,13 +28,24 @@
         line-height: 24px; /* 150% */
     }
 
-    .icon_emptystate {
-        width: 96px;
-        height: 96px;
-        padding: 22px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.icon_emptystate {
+    width: 96px;
+    height: 96px;
+    padding: 22px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background-color: rgba(26, 22, 18, 0.8);
+}
+
+.icon_emptystate img {
+    width: 52px;
+    height: 52px;
+    display: block;
 }
   </style>
 
@@ -57,7 +68,7 @@
     </button>
 
     <button class="bottomnav__button" type="button">
-        <img src="assets/icons/user.svg" alt="User Icon">
+        <img src="../assets/icons/user.svg" alt="User Icon">
     </button>
 </nav>
 
@@ -65,8 +76,8 @@
 
     <div class="container">
         <div class="icon_emptystate">
-            <img src="icon.png" alt="Compass Icon">
-            </div>
+            <img src="../assets/icons/compass_dark.svg" alt="Compass Icon">
+        </div>
         <h1>No decisions yet</h1>
         <p>The Fellowship hasn't made any route decisions yet. Create your first decision to guide the journey through Middle Earth.</p>
         <button class="btn btn--primary">Add voting</button>
