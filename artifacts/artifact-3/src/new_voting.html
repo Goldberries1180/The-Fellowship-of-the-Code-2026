@@ -8,19 +8,26 @@
 <body>
 <header>
 <p class="route-header">New Route Decision</p>
-<p class="route-header">Add route option for voting</p>
+<p class="route-sub-header">Add route option for voting</p>
 </header>
 <main>
 <form>
-    <label class="switch"> <!-- geklaut von W3Schools -->
-        <input type="checkbox">
-        <span class="slider round"></span>
-    </label>
+    <div class="switch-container">
+        <img class="info-icon" src="../assets/icons/info_icon.svg" alt="Info to Criticality Selection" title="The vote span for critical votes is 24 hours and everyone is selected to vote">
+        <div class="new-switch">
+            <div class="new-switch__option new-switch__option--active">
+            <span class="new-switch__label">Non-Critical</span>
+            </div>
+            <div class="new-switch__option new-switch__option--inactive">
+            <span class="new-switch__label">Critical</span>
+            </div>
+        </div>
+    </div>
     <div class="route-options">
         <label class="card-headline">Who should vote?</label><br>
             <div class="checkbox-grid">
                 <div class="checkbox-column">
-                    <label><input type="checkbox" name="vote" value="Gandalf">Gandalf</label>
+                    <label><input class=vote-select" type="checkbox" name="vote" value="Gandalf">Gandalf</label>
                     <label><input type="checkbox" name="vote" value="Frodo">Frodo</label>
                     <label><input type="checkbox" name="vote" value="Sam">Sam</label>
                     <label><input type="checkbox" name="vote" value="Aragorn">Aragorn</label>
@@ -35,11 +42,11 @@
             </div>
     </div>
     <div class="route-options">
-    <label class="route-label">Option 1<br><input type="text" placeholder="Route Option 1"></label><br>
-    <label>Known Risks<br>
-        <textarea placeholder="Known Risks"></textarea>
+    <label class="route-label">Option 1<br><input class="option_name" type="text" placeholder="Enter Route Name"></label><br>
+    <label class="route-label">Known Risks<br>
+        <textarea class="risks-area" placeholder="Known Risks"></textarea>
     </label><br>
-    <label>Source<br>
+    <label class="route-label">Source<br>
         <select name="source" class="source-select">
             <option value="Gandalf">Gandalf</option>
             <option value="Frodo">Frodo</option>
@@ -55,12 +62,12 @@
     </div>
 <div class="route-options">
     <label class="route-label">Option 2<br>
-        <input type="text" placeholder="Route Option 2">
+        <input class="option_name" type="text" placeholder="Route Option 2">
     </label><br>
-    <label>Known Risks<br>
-        <textarea placeholder="Known Risks"></textarea>
+    <label class="route-label">Known Risks<br>
+        <textarea class="risks-area" placeholder="Known Risks"></textarea>
     </label><br>
-    <label>Source<br>
+    <label class="route-label">Source<br>
         <select name="source" class="source-select">
             <option value="Gandalf">Gandalf</option>
             <option value="Frodo">Frodo</option>
@@ -74,7 +81,26 @@
         </select>
     </label><br>
 </div>
+    <div>
+        <label class="start-vote-info">Selected group members will be notified<br></label>
+        <button class="button-start" type="submit">Start vote</button>
+    </div>
+
 </form>
 </main>
+<nav class="bottomnav">
+    <div class="bottomnav__button is-active">
+        <img src="../assets/icons/compass.svg" alt="Decisions">
+    </div>
+    <div class="bottomnav__button">
+        <img src="../assets/icons/cube.svg" alt="Settings">
+    </div>
+    <div class="bottomnav__button">
+        <img src="../assets/icons/map.svg" alt="Info">
+    </div>
+    <div class="bottomnav__button">
+        <img src="../assets/icons/user.svg" alt="User">
+    </div>
+</nav>
 </body>
 </html>
