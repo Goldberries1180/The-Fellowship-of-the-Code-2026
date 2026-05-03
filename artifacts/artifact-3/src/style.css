@@ -626,3 +626,164 @@ textarea::placeholder {
     font-family: Inter, sans-serif;
     font-weight: 400;
 }
+/* =========================
+   VOTING SCREEN
+========================= */
+
+.vote-screen {
+    align-items: flex-start;
+    padding: 20px 14px 24px;
+    color: #E8E3D6;
+}
+
+.vote-content {
+    width: 100%;
+}
+
+.vote-title {
+    margin: 22px 0 10px;
+    color: #E8E3D6;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.vote-meta {
+    margin: 0 0 18px;
+    color: #E8E3D6;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.vote-instruction {
+    margin: 0 0 18px;
+    text-align: center;
+    color: #E8E3D6;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* =========================
+   VOTE CARDS
+========================= */
+
+.vote-card {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    min-height: 94px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 16px 14px;
+    margin-bottom: 12px;
+
+    background: #2C2416;
+    border: 1px solid #3A3228;
+    border-radius: var(--radius-lg);
+
+    cursor: pointer;
+}
+
+.vote-card:has(input:checked) {
+    background: #1C160E;
+    border-color: #7A5D47;
+}
+
+/* Text links */
+
+.vote-card__content {
+    order: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    text-align: left;
+    color: #E8E3D6;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.vote-card__content strong {
+    color: #E8E3D6;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.vote-card__content span {
+    color: var(--color-light-grey);
+}
+
+.vote-card__content b {
+    color: #E8E3D6;
+}
+
+/* Kästchen rechts */
+
+.vote-card input[type="radio"] {
+    order: 2;
+    flex-shrink: 0;
+
+    appearance: none;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 12px;
+
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.vote-card input[type="radio"]:checked {
+    background-image: url("../assets/icons/Checkbox.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+/* =========================
+   REASON FIELD
+========================= */
+
+.reason-label {
+    display: block;
+    margin: 16px 0 8px;
+
+    color: #E8E3D6;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.reason-input {
+    width: 100%;
+    max-width: none;
+    height: 100px;
+    resize: none;
+}
+
+/* =========================
+   SUBMIT
+========================= */
+
+.submit-vote {
+    width: 100%;
+    max-width: none;
+    margin-top: 18px;
+}
+
+.vote-hint {
+    margin: 12px 0 0;
+    text-align: center;
+
+    color: var(--color-light-grey);
+    font-size: 14px;
+}
