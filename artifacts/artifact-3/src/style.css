@@ -365,6 +365,20 @@ body {
     padding-bottom: 64px;
 }
 
+body.screen-empty {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(rgba(26,22,18,0.7), rgba(26,22,18,0.7)),
+        url("../assets/images/Background_1.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 40px 25px 64px;
+}
+
 /* =========================
    ROUTING STYLES (from style.css)
 ========================= */
