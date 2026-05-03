@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Voting Screen</title>
+</head>
+<body>
+  <main class="container vote-screen">
+
+    <button class="nav__back" type="button">
+      <span>&lt;</span>
+      Back
+    </button>
+
+    <section class="vote-content">
+      <h1 class="vote-title">Caradhras or Moria?</h1>
+
+      <p class="vote-meta">
+        Vote initiated by Frodo<br>
+        3 of 9 voted
+      </p>
+
+      <p class="vote-instruction">Tap a route to select</p>
+
+		<label class="card card--voting vote-card">
+		  <input type="radio" name="route">
+
+		  <span class="vote-card__content">
+			<strong>Caradhras</strong>
+			<span>Known Risks: <b>Snow Storm</b></span>
+			<span>Source: Gandalf</span>
+		  </span>
+		</label>
+
+      <label class="card card--voting vote-card">
+        <input type="radio" name="route">
+
+        <span class="vote-card__content">
+          <strong>Moria</strong>
+          <span>Known Risks: <b>???</b></span>
+          <span>Source: Gimli</span>
+        </span>
+      </label>
+
+      <label class="route-label reason-label" for="reason">
+        Your reasoning (optional)
+      </label>
+
+      <textarea
+        id="reason"
+        class="input input--large reason-input"
+        placeholder="I can deal with snow but hate Darkness"
+      ></textarea>
+
+      <button class="btn btn--primary submit-vote" type="submit">
+        Submit vote
+      </button>
+
+      <p class="vote-hint">Your vote will be visible to others</p>
+    </section>
+
+  </main>
+
+  <nav class="bottomnav">
+    <div class="bottomnav__inner">
+      <button class="bottomnav__button is-active">☻</button>
+      <button class="bottomnav__button">◇</button>
+      <button class="bottomnav__button">♧</button>
+      <button class="bottomnav__button">♙</button>
+    </div>
+  </nav>
+</body>
+
+</html>
