@@ -2,9 +2,9 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>UI Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Empty State</title>
 
-    <!-- CSS-->
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -18,15 +18,16 @@
         line-height: 36px; /* 150% */
     }
 
-    p {
-        width: 362px;
-        color: #A39989;
-        text-align: center;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 150% */
-    }
+p {
+    width: 100%;
+    max-width: 362px;
+    color: #A39989;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
 
 .icon_emptystate {
     width: 96px;
@@ -55,21 +56,23 @@
 
     <!-- NAV -->
 <nav class="bottomnav">
-    <button class="bottomnav__button is-active" type="button">
-        <img src="../assets/icons/compass_dark.svg" alt="Compass Icon">
-    </button>
+    <div class="bottomnav__inner">
+        <button class="bottomnav__button is-active" type="button">
+            <img src="../assets/icons/compass_dark.svg" alt="Compass Icon">
+        </button>
 
-    <button class="bottomnav__button" type="button">
-        <img src="../assets/icons/cube.svg" alt="Cube Icon">
-    </button>
+        <button class="bottomnav__button" type="button">
+            <img src="../assets/icons/cube.svg" alt="Cube Icon">
+        </button>
 
-    <button class="bottomnav__button" type="button">
-        <img src="../assets/icons/map.svg" alt="Map Icon">
-    </button>
+        <button class="bottomnav__button" type="button">
+            <img src="../assets/icons/map.svg" alt="Map Icon">
+        </button>
 
-    <button class="bottomnav__button" type="button">
-        <img src="../assets/icons/user.svg" alt="User Icon">
-    </button>
+        <button class="bottomnav__button" type="button">
+            <img src="../assets/icons/user.svg" alt="User Icon">
+        </button>
+    </div>
 </nav>
 
     <!-- CONTENT -->
@@ -81,6 +84,6 @@
         <h1>No decisions yet</h1>
         <p>The Fellowship hasn't made any route decisions yet. Create your first decision to guide the journey through Middle Earth.</p>
         <button class="btn btn--primary">Add voting</button>
-        </div>
+    </div>
 </body>
 </html>
