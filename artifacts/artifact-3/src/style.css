@@ -329,6 +329,7 @@ body {
 
 .bottomnav__button.is-active {
     background: var(--color-bg-navi-btn);
+    border: 1px solid var(--color-primary);
 }
 
 .bottomnav__button img {
