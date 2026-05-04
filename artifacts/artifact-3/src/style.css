@@ -557,12 +557,12 @@ input[type="checkbox"]:checked {
     width: 340px;
     height: 36px;
     margin-top: 8px;
-    color: #A39989;
-    font-size: 16px;
+    color: #E8E3D6;
+    font-size: 14px;
     font-family: Inter, sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 24px;
-    padding: 0 8px 0 8px;
+    padding: 0 8px 0 16px;
     background: var(--color-bg-elements);
     border: 0.68px solid #a39989;
     border-radius: 12px;
@@ -593,7 +593,6 @@ input::placeholder {
     font-family: Inter, sans-serif;
     font-weight: 400;
     line-height: 24px;
-    padding: 0 0 0 8px;
 }
 .risks-area {
     width: 340px;
@@ -609,7 +608,6 @@ textarea::placeholder {
     font-family: Inter, sans-serif;
     font-weight: 400;
     line-height: 24px;
-    padding: 8px 0 0 8px;
 }
 .route-label {
     color: #E8E3D6;
