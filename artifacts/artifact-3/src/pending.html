@@ -1,0 +1,86 @@
+git<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pending Vote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="route-options">
+
+    <!-- CONTENT BLOCK (unsichtbare Card) -->
+    <section class="card" style="
+        background: transparent;
+        border: none;
+        padding: 0;
+        max-width: 340px;
+        margin: 40px auto;
+    ">
+
+        <h2 class="card-headline">Caradhras or Moria?</h2>
+
+        <p class="route-sub-header">Vote initiated by Frodo</p>
+
+        <p>
+            You voted for 
+            <span style="color: var(--color-primary);">Caradhras</span>
+        </p>
+
+        <p class="route-sub-header">
+            Waiting for everyone to finish voting...
+        </p>
+
+        <!-- PROGRESS -->
+        <div style="text-align:center; margin-top:40px;">
+
+            <p style="font-size:48px; font-weight:600;">
+                4 <span style="font-size:20px; color: var(--color-light-grey);">of 9</span> voted
+            </p>
+
+            <div style="
+                height:6px;
+                background:#3A3228;
+                border-radius:4px;
+                margin:10px 0;
+            ">
+                <div style="
+                    width:44%;
+                    height:100%;
+                    background:var(--color-primary);
+                    border-radius:4px;
+                "></div>
+            </div>
+
+            <p class="route-sub-header">44% complete</p>
+
+        </div>
+
+        <!-- TIMER -->
+        <div style="text-align:center; margin-top:30px;">
+            <p class="route-sub-header">Voting will end in</p>
+            <p style="font-size:20px;">00:08:22</p>
+        </div>
+
+    </section>
+
+</main>
+
+<nav class="bottomnav">
+    <div class="bottomnav__button is-active">
+        <img src="../assets/icons/compass_dark.svg" alt="Decisions">
+    </div>
+    <div class="bottomnav__button">
+        <img src="../assets/icons/cube.svg" alt="Settings">
+    </div>
+    <div class="bottomnav__button">
+        <img src="../assets/icons/map.svg" alt="Info">
+    </div>
+    <div class="bottomnav__button">
+        <img src="../assets/icons/user.svg" alt="User">
+    </div>
+</nav>
+
+</body>
+</html>
