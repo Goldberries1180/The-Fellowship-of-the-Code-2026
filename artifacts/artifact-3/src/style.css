@@ -252,7 +252,8 @@ body {
 
 /* Results */
 .card--results {
-    max-width: 340px;display: flex;
+    max-width: 340px;
+    display: flex;
     flex-direction: column;
     padding: 1px;
     border: 1px solid #3A3228;
