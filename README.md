@@ -46,7 +46,11 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 
    [Go to Chapter II →](chapters/chapter-2-paths-choices.md)
 
-***
+3. Chpter III - Representation  
+*"The world is indeed full of peril and in it there are many dark places; but still there is much that is fair."*  
+
+
+   ***
 
 # Key Features of The Fellowship Companion
 
