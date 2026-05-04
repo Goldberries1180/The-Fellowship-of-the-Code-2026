@@ -66,7 +66,7 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 
 `Each chapter has its own detailed changelog for chapter-specific updates.`
 
-### v2.3 - final improvements & Design rationale
+### v2.4 - final improvements & Design rationale
 - Bugfixes
 - global Navigation fix
 - added all htmls from individual branches
