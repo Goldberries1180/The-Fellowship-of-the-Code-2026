@@ -436,8 +436,8 @@ body.screen-empty {
 }
 .new-switch {
     width: 340px;
-    height: 34px;
-    padding: 10px 5px;
+    height: 52px;
+    padding: 0 5px;
     position: relative;
     background: var(--color-bg-elements);
     border-radius: 12px;
@@ -446,6 +446,7 @@ body.screen-empty {
     align-items: center;
     display: flex;
     margin: 20px auto;
+    box-sizing: content-box;
 }
 
 .new-switch__option {
@@ -458,6 +459,7 @@ body.screen-empty {
     gap: 10px;
     display: flex;
     cursor: pointer;
+    box-sizing: content-box;
 }
 
 .new-switch__option--active {
