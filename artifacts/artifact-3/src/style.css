@@ -411,8 +411,8 @@ body.screen-empty {
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
+    text-align: center;
 
-    padding-left: 25px;
 }
 .route-sub-header {
     color: var(--color-text, #FFFFFF);
@@ -421,7 +421,10 @@ body.screen-empty {
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    padding-left: 25px;
+    text-align: center;
+}
+.switch-container {
+    position: relative;
 }
 .info-icon {
     position: absolute;
