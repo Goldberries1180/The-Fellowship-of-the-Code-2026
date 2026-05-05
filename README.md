@@ -70,6 +70,9 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 
 `Each chapter has its own detailed changelog for chapter-specific updates.`
 
+### v2.5 - Links/ Navigation
+- added navigation between screens
+
 ### v2.4 - final improvements & Design rationale
 - Bugfixes
 - global Navigation fix
