@@ -43,7 +43,7 @@ The member who initiates the decision names the options, sets criticality, docum
 All notified members see the same screen: the question, the options with their risks and sources, and an optional comment field. Members select an option before submitting.
 
 **[`src/pending.html`](src/pending.html) – Waiting**
-After submitting a vote, the member sees their own choice confirmed and a live count of how many members have responded. The result is not shown until the vote closes.
+After submitting a vote, the member sees their own choice confirmed and a live count of how many members have responded. The result is not shown until the vote closes (in the working version with JS, here we clumsily added a button to view the result).
 
 **[`src/result.html`](src/result.html) – Outcome**
 Once the vote closes, all members see the result: the winning route, the vote split, and the losing option for reference. The outcome is logged in the journey record.
