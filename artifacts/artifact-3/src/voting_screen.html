@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>Voting Screen</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/compass_dark.svg">
+    <title>Cast Your Vote - The Fellowship Companion</title>
 </head>
 <body>
   <main class="container vote-screen">
 
-    <button class="nav__back" type="button">
-      <span>&lt;</span>
-      Back
-    </button>
+      <a href="voting_empty.html" class="nav__back">
+          <img src="../assets/icons/back_icon.svg" alt="back">
+          Back
+      </a>
 
     <section class="vote-content">
       <h1 class="vote-title">Caradhras or Moria?</h1>
@@ -53,9 +54,9 @@
         placeholder="I can deal with snow but hate Darkness"
       ></textarea>
 
-      <button class="btn btn--primary submit-vote" type="submit">
+      <a href="pending.html" class="btn btn--primary submit-vote" type="submit">
         Submit vote
-      </button>
+      </a>
 
       <p class="vote-hint">Your vote will be visible to others</p>
     </section>
@@ -80,6 +81,7 @@
 				<img src="../assets/icons/user.svg" alt="User Icon">
 			</button>
 		</div>
+    </nav>
 </body>
 
 </html>
