@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85f81f0-6d3a-4084-806e-5b359282120f" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/artifacts/artifact-3/assets/icons/back_icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/artifacts/artifact-3/src/new_voting.html" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-3/src/new_voting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/artifact-3/src/pending.html" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-3/src/pending.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/artifact-3/src/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-3/src/result.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/artifacts/artifact-3/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-3/src/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/artifact-3/src/voting_empty.html" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-3/src/voting_empty.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/artifact-3/src/voting_screen.html" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-3/src/voting_screen.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +60,7 @@
     "JavaScript Debug.new_voting.html.executor": "Run",
     "JavaScript Debug.pending.html.executor": "Run",
     "JavaScript Debug.result.html.executor": "Run",
+    "JavaScript Debug.voting_empty.html.executor": "Run",
     "JavaScript Debug.voting_screen.html.executor": "Run",
     "JavaScript Debug.wireframe1.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -144,7 +141,7 @@
       <workItem from="1777176015550" duration="1243000" />
       <workItem from="1777179221160" duration="284000" />
       <workItem from="1777206901262" duration="33931000" />
-      <workItem from="1777923842014" duration="4764000" />
+      <workItem from="1777923842014" duration="6680000" />
     </task>
     <task id="LOCAL-00001" summary="first html try in a long time. wireframe1">
       <option name="closed" value="true" />

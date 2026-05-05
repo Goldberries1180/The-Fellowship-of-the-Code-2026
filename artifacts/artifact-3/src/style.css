@@ -1,4 +1,6 @@
-
+html {
+    scrollbar-gutter: stable;
+}
 body {
     margin: 0;
     min-height: 100vh;
@@ -7,6 +9,7 @@ body {
 
     background-color: #1A1612;
 
+    padding-bottom: 64px;
 }
 
 /* =========================
@@ -530,10 +533,6 @@ header {
     display: block;
 }
 
-body {
-    margin: 0;
-    padding-bottom: 64px;
-}
 
 body.screen-empty {
     min-height: 100vh;
@@ -554,7 +553,7 @@ body.screen-empty {
 ========================= */
 .new_voting {
     align-items: center;
-    padding: 20px 14px 24px;
+    padding: 20px 24px 24px;
     color: #E8E3D6;
 }
 

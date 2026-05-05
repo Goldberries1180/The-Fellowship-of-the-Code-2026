@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="../assets/icons/compass_dark.svg">
-    <title>The Fellowship Companion – New Route Decision</title>
+    <title>New Route Decision - The Fellowship Companion</title>
 </head>
 <body>
-<div class="container new_voting">
+<main class="container new_voting">
     <header>
         <a href="voting_empty.html" class="nav__back">
             <img src="../assets/icons/back_icon.svg" alt="back">
@@ -16,7 +16,7 @@
         <p class="route-header">New Route Decision</p>
         <p class="route-sub-header">Add route option for voting</p>
     </header>
-<main>
+
 <form>
     <div class="switch-container">
         <img class="info-icon" src="../assets/icons/info_icon.svg" alt="Info to Criticality Selection" title="The vote span for critical votes is 24 hours and everyone is selected to vote">
@@ -30,7 +30,7 @@
         <label class="card-headline">Who should vote?</label><br>
             <div class="checkbox-grid">
                 <div class="checkbox-column">
-                    <label><input class=vote-select" type="checkbox" name="vote" value="Gandalf">Gandalf</label>
+                    <label><input class="vote-select" type="checkbox" name="vote" value="Gandalf">Gandalf</label>
                     <label><input type="checkbox" name="vote" value="Frodo">Frodo</label>
                     <label><input type="checkbox" name="vote" value="Sam">Sam</label>
                     <label><input type="checkbox" name="vote" value="Aragorn">Aragorn</label>
@@ -91,22 +91,26 @@
 
 </form>
 </main>
+
+
 <nav class="bottomnav">
     <div class="bottomnav__inner">
-        <div class="bottomnav__button is-active">
-            <img src="../assets/icons/compass_dark.svg" alt="Decisions">
-        </div>
-        <div class="bottomnav__button">
-            <img src="../assets/icons/cube.svg" alt="Settings">
-        </div>
-        <div class="bottomnav__button">
-            <img src="../assets/icons/map.svg" alt="Info">
-        </div>
-        <div class="bottomnav__button">
-            <img src="../assets/icons/user.svg" alt="User">
-        </div>
+        <button class="bottomnav__button is-active" type="button">
+            <img src="../assets/icons/compass_dark.svg" alt="Compass Icon">
+        </button>
+
+        <button class="bottomnav__button" type="button">
+            <img src="../assets/icons/cube.svg" alt="Cube Icon">
+        </button>
+
+        <button class="bottomnav__button" type="button">
+            <img src="../assets/icons/map.svg" alt="Map Icon">
+        </button>
+
+        <button class="bottomnav__button" type="button">
+            <img src="../assets/icons/user.svg" alt="User Icon">
+        </button>
     </div>
 </nav>
-</div>
 </body>
 </html>
