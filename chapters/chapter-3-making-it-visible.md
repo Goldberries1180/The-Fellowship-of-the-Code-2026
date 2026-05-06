@@ -31,7 +31,7 @@ Design becomes a shared language only when everyone can see it. Visualising an i
 We developed:
 
 - Screen designs in Figma as a foundation for the look & feel
-- A manual Figma design system, built by hand since automated generation was not supported
+- Figma design system
 - Initial HTML / CSS implementations of selected screens for testing purposes
 - A CSS structure proposal to improve maintainability
 
@@ -39,16 +39,16 @@ The focus was on representing how users perceive and navigate the system — not
 
 **Focus**
 
-- Translating conceptual ideas into visible screens
+- Translating conceptual ideas into visible screens with html
 - Establishing a base for a design system
 - Exploring consistency across multiple views
-- Understanding how technical structure (CSS) influences visual clarity
+- Understanding how CSS and HTML work together
 
 ---
 
 ### AI Assistance
 
-AI was used to support in basic screen design.
+AI was used to support in basic screen design. Still, this did not work out very well and re-work needed to be done manually in Figma. Further we used it to support in debugging.
 
 **What did we expect?**
 
