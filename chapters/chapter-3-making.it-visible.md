@@ -7,7 +7,7 @@
   - [Summary](#summary)
   - [Artifact](#artifact)
   - [AI Assistance](#ai-assistance)
-  - [Lessons Learned](#lessons-learned)
+  - [Lessons Learned](#lessons-learned) 
 
 ---
   
@@ -23,7 +23,7 @@ Design becomes a shared language only when everyone can see it. Visualising an i
 ---
 
 ## Artifact
-**[The Fellowship Companion – Artifact III: Making It Visible(https://github.com/Goldberries1180/The-Fellowship-of-the-Code-2026/blob/main/artifacts/artifact-3/artifact-3-representation.md)**
+**[The Fellowship Companion – Artifact III: Making It Visible](.../artifacts/artifact-3/artifact-3-representation.md)**
 
 **Build**
 
