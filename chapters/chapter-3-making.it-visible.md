@@ -65,7 +65,7 @@ AI assisted during:
 - Idea generation for small layout adjustments
 - Reduced trial‑and‑error time during development
 
-**Misleading++
+**Misleading**
 - Occasionally suggested overly generic solutions that conflicted with our naming conventions
 - Did not always recognise project‑specific CSS interactions
 
