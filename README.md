@@ -49,7 +49,7 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 3. Chapter III - Making it visible  
 *"The world is indeed full of peril and in it there are many dark places; but still there is much that is fair."*  
 
-[Go to Chapter II →](chapters/chapter-3-making-it-visible.md)
+   [Go to Chapter II →](chapters/chapter-3-making-it-visible.md)
 
    ***
 
