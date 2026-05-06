@@ -18,6 +18,7 @@ Where Chapter II defined decisions and interactions, this phase was about expo
 We explored how structure, color, and hierarchy communicate intent long before logic is implemented. Making our ideas visible also revealed dependencies and inconsistencies that were hidden during conceptual work.
 
 **Learning Outcomes**
+
 Design becomes a shared language only when everyone can see it. Visualising an idea exposes weak points and sparks discussion earlier. The challenge is not only to design beautiful screens but to maintain clarity and structure within the team and the codebase that supports those visuals.
 
 ---
