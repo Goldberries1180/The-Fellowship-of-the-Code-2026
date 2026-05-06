@@ -49,6 +49,7 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 3. Chapter III - Making it visible  
 *"The world is indeed full of peril and in it there are many dark places; but still there is much that is fair."*  
 
+[Go to Chapter II →](chapters/chapter-3-making-it-visible.md)
 
    ***
 
@@ -70,6 +71,9 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 
 `Each chapter has its own detailed changelog for chapter-specific updates.`
 
+### v3.0 - Final Version
+- Added "Chapter 3: Making It Visible" of the Red Book of Westmarch
+  
 ### v2.5 - Links/ Navigation
 - added navigation between screens
 
