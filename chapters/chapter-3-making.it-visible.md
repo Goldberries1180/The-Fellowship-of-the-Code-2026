@@ -3,7 +3,7 @@
 "*The world is indeed full of peril and in it there are many dark places; but still there is much that is fair.*" - Haldir of Lothlorien
 
 **Table of Contents**
-- [The Red Book of Westmarch - Chapter III: Making It Visible]
+- [The Red Book of Westmarch - Chapter III: Making It Visible](#the-red-book-of-westermarch---chapter-iii-making-it-visible)
   - [Summary](#summary)
   - [Artifact](#artifact)
   - [AI Assistance](#ai-assistance)
@@ -23,7 +23,7 @@ Design becomes a shared language only when everyone can see it. Visualising an i
 ---
 
 ## Artifact
-**[The Fellowship Companion – Artifact III: Making It Visible(https://github.com/Goldberries1180/The-Fellowship-of-the-Code-2026/blob/main/artifacts/artifact-3/artifact-3-representation.md)++
+**[The Fellowship Companion – Artifact III: Making It Visible(https://github.com/Goldberries1180/The-Fellowship-of-the-Code-2026/blob/main/artifacts/artifact-3/artifact-3-representation.md)**
 
 **Build**
 
