@@ -51,6 +51,7 @@ The focus was on representing how users perceive and navigate the system — not
 AI was used to support in basic screen design.
 
 **What did we expect?**
+
 To use AI as an assistant for bug‑fixing, syntax help, and idea generation – but not for stylistic or structural decision‑making.
 
 **What actually happened?**
