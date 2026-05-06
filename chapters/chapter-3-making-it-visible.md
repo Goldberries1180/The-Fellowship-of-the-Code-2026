@@ -54,6 +54,7 @@ AI was used to support in basic screen design.
 To use AI as an assistant for bug‑fixing, syntax help, and idea generation – but not for stylistic or structural decision‑making.
 
 **What actually happened?**
+
 AI assisted during:
 - CSS / HTML debugging and code refinement
 - Spot‑checks for layout issues
