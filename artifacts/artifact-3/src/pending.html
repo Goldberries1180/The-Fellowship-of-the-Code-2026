@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waiting for the Fellowship - The Fellowship Companion</title>
     <link rel="icon" type="image/svg+xml" href="../assets/icons/compass_dark.svg">
     <link rel="stylesheet" href="style.css">
@@ -9,24 +10,17 @@
 
 <body>
 
-<main class="route-options">
+<main class="container pending-screen">
 
-    <!-- CONTENT BLOCK (unsichtbare Card) -->
-    <section class="card" style="
-        background: transparent;
-        border: none;
-        padding: 0;
-        max-width: 340px;
-        margin: 40px auto;
-    ">
+    <section class="pending-content">
 
         <h2 class="card-headline">Caradhras or Moria?</h2>
 
         <p class="route-sub-header">Vote initiated by Frodo</p>
 
         <p class="route-sub-header">
-            You voted for 
-            <span style="color: var(--color-primary);">Caradhras</span>
+            You voted for
+            <span class="pending-vote-choice">Caradhras</span>
         </p>
 
         <p class="route-sub-header">
@@ -34,47 +28,29 @@
         </p>
 
         <!-- PROGRESS -->
-        <div style="text-align:center; margin-top:40px;">
+        <div class="pending-progress">
+            <p class="pending-count">
+                <span class="pending-count__number">4</span>
+                <span class="pending-count__label">of</span>
+                <span class="pending-count__number">9</span>
+                <span class="pending-count__label">voted</span>
+            </p>
 
-         <p style="
-  display:flex;
-  justify-content:center;
-  align-items:baseline;
-  gap:6px;
-  font-weight:600;
-  text-align:center;
-">
-  <span style="font-size:48px;">4</span>
-  <span style="font-size:20px; color: var(--color-light-grey); font-weight:400;">of</span>
-  <span style="font-size:48px;">9</span>
-  <span style="font-size:20px; color: var(--color-light-grey); font-weight:400;">voted</span>
-</p>
-            
-           <div style="
-    width:60%;
-    height:6px;
-    background:#3A3228;
-    border-radius:4px;
-    margin:10px auto;
-">
-    <div style="
-        width:44%;
-        height:100%;
-        background:var(--color-primary);
-        border-radius:4px;
-    "></div>
-</div>
+            <div class="pending-bar">
+                <div class="pending-bar__fill"></div>
+            </div>
 
             <p class="route-sub-header">44% complete</p>
-
         </div>
 
         <!-- TIMER -->
-        <div style="text-align:center; margin-top:30px;">
+        <div class="pending-timer">
             <p class="route-sub-header">Voting will end in</p>
-            <p style="font-size:20px;">00:08:22</p>
+            <p class="pending-timer__value">00:08:22</p>
         </div>
+
         <a href="result.html" class="btn btn--primary">See results</a>
+
     </section>
 
 </main>
@@ -84,15 +60,15 @@
         <button class="bottomnav__button is-active" type="button">
             <img src="../assets/icons/compass_dark.svg" alt="Compass Icon">
         </button>
- 
+
         <button class="bottomnav__button" type="button">
             <img src="../assets/icons/cube.svg" alt="Cube Icon">
         </button>
- 
+
         <button class="bottomnav__button" type="button">
             <img src="../assets/icons/map.svg" alt="Map Icon">
         </button>
- 
+
         <button class="bottomnav__button" type="button">
             <img src="../assets/icons/user.svg" alt="User Icon">
         </button>

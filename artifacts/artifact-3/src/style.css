@@ -734,6 +734,7 @@ input[type="checkbox"]:checked {
     text-align: center !important;
     align-self: flex-start;
     width: 100%;
+    color: var(--color-light-grey)
 }
 .option_name {
     width: 340px;
@@ -942,4 +943,116 @@ textarea::placeholder {
 
     color: var(--color-light-grey);
     font-size: 14px;
+}
+/* ===================== */
+/* PENDING SCREEN        */
+/* ===================== */
+
+.pending-screen {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+
+.pending-content {
+    max-width: 340px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pending-vote-choice {
+    color: var(--color-primary);
+}
+
+.pending-progress {
+    margin-top: 40px;
+}
+
+.pending-count {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.pending-count__number {
+    font-size: 48px;
+}
+
+.pending-count__label {
+    font-size: 20px;
+    color: var(--color-light-grey);
+    font-weight: 400;
+}
+
+.pending-bar {
+    width: 60%;
+    height: 6px;
+    background: #3A3228;
+    border-radius: 4px;
+    margin: 10px auto;
+}
+
+.pending-bar__fill {
+    width: 44%;
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: 4px;
+}
+
+.pending-timer {
+    margin-top: 30px;
+    color: var(--color-light-grey);
+}
+
+.pending-timer__value {
+    font-size: 20px;
+}
+/* ===================== */
+/* EMPTY SCREEN          */
+/* ===================== */
+
+.empty-screen {
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.empty-screen__title {
+    color: #E8E3D6;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.empty-screen__text {
+    max-width: 362px;
+    color: #A39989;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.icon-emptystate {
+    width: 96px;
+    height: 96px;
+    padding: 22px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(26, 22, 18, 0.8);
+}
+
+.icon-emptystate img {
+    width: 52px;
+    height: 52px;
+    display: block;
 }
