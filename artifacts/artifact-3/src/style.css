@@ -1056,3 +1056,45 @@ textarea::placeholder {
     height: 52px;
     display: block;
 }
+.user-switcher {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 16px;
+    z-index: 9999;
+    background: var(--color-bg-elements);
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.user-switcher.is-visible {
+    display: block;
+}
+.user-name {
+    color: var(--color-text);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.user-switcher__hint {
+    color: var(--color-light-grey);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.user-switcher__button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.user-switcher__label {
+    color: var(--color-light-grey);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.user-switcher__button img {
+    width: 24px;
+    height: 24px;
+}

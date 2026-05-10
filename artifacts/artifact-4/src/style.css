@@ -54,6 +54,13 @@ header {
     align-self: flex-start;
     width: 100%;
 }
+/* Screens for JS Logic */
+.screen {
+    display: none;
+}
+.screen.is-active {
+    display: block;
+}
 
 /* =========================
    BUTTONS
