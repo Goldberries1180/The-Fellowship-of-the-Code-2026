@@ -11,13 +11,96 @@
 </head>
 <body>
     <div id="screen-empty" class="screen">
-
+        <h1 class="empty-screen__title">No decisions yet</h1>
+        <p class="empty-screen__text">The Fellowship hasn't made any route decisions yet. Create your first decision to guide the journey through Middle Earth.</p>
+        <button id="new-vote-button" class="btn btn--primary">New Decision</button>
     </div>
     <div id="screen-new-vote" class="screen">
+        <header>
+            <button class="nav__back" id="btn-back-to-empty">
+                <img src="../assets/icons/back_icon.svg" alt="back">
+                Back
+            </button>
+            <p class="route-header">New Route Decision</p>
+            <p class="route-sub-header">Add route option for voting</p>
+        </header>
 
+        <form>
+            <div class="switch-container">
+                <img class="info-icon" src="../assets/icons/info_icon.svg" alt="Info to Criticality Selection" title="The vote span for critical votes is 24 hours and everyone is selected to vote">
+                <input type="checkbox" id="criticality-toggle" class="switch-toggle">
+                <label class="new-switch" for="criticality-toggle">
+                    <span class="new-switch__option new-switch__option--active">Non-Critical</span>
+                    <span class="new-switch__option new-switch__option--inactive">Critical</span>
+                </label>
+            </div>
+            <div class="route-options">
+                <label class="card-headline">Who should vote?</label><br>
+                <div class="checkbox-grid">
+                    <div class="checkbox-column">
+                        <label><input type="checkbox" name="vote" value="Gandalf">Gandalf</label>
+                        <label><input type="checkbox" name="vote" value="Frodo">Frodo</label>
+                        <label><input type="checkbox" name="vote" value="Sam">Sam</label>
+                        <label><input type="checkbox" name="vote" value="Aragorn">Aragorn</label>
+                        <label><input type="checkbox" name="vote" value="Legolas">Legolas</label>
+                    </div>
+                    <div class="checkbox-column">
+                        <label><input type="checkbox" name="vote" value="Gimli">Gimli</label>
+                        <label><input type="checkbox" name="vote" value="Boromir">Boromir</label>
+                        <label><input type="checkbox" name="vote" value="Pippin">Pippin</label>
+                        <label><input type="checkbox" name="vote" value="Merry">Merry</label>
+                    </div>
+                </div>
+            </div>
+            <div class="route-options">
+                <label class="route-label">Option 1<br><input class="option_name input input--small" id="option1-name" type="text" placeholder="Enter Route Name"></label><br>
+                <label class="route-label">Known Risks<br>
+                    <textarea class="risks-area input input--large" id="option1-risks" placeholder="Known Risks"></textarea>
+                </label><br>
+                <label class="route-label">Source<br>
+                    <select name="source" class="source-select" id="option1-source">
+                        <option value="Gandalf">Gandalf</option>
+                        <option value="Frodo">Frodo</option>
+                        <option value="Sam">Sam</option>
+                        <option value="Aragorn">Aragorn</option>
+                        <option value="Legolas">Legolas</option>
+                        <option value="Gimli">Gimli</option>
+                        <option value="Boromir">Boromir</option>
+                        <option value="Pippin">Pippin</option>
+                        <option value="Merry">Merry</option>
+                    </select>
+                </label><br>
+            </div>
+            <div class="route-options">
+                <label class="route-label">Option 2<br>
+                    <input class="option_name input input--small" id="option2-name" type="text" placeholder="Route Option 2">
+                </label><br>
+                <label class="route-label">Known Risks<br>
+                    <textarea class="risks-area input input--large" id="option2-risks" placeholder="Known Risks"></textarea>
+                </label><br>
+                <label class="route-label">Source<br>
+                    <select name="source" class="source-select" id="option2-source">
+                        <option value="Gandalf">Gandalf</option>
+                        <option value="Frodo">Frodo</option>
+                        <option value="Sam">Sam</option>
+                        <option value="Aragorn">Aragorn</option>
+                        <option value="Legolas">Legolas</option>
+                        <option value="Gimli">Gimli</option>
+                        <option value="Boromir">Boromir</option>
+                        <option value="Pippin">Pippin</option>
+                        <option value="Merry">Merry</option>
+                    </select>
+                </label><br>
+            </div>
+            <div>
+                <label class="start-vote-info">Selected group members will be notified<br></label>
+                <button class="btn btn--primary" type="submit" id="btn-start-voting">Start vote</button>
+            </div>
+
+        </form>
     </div>
     <div id="screen-voting" class="screen">
-
+    <h1>Servas, hier konnsd voten</h1>
     </div>
     <div id="screen-pending" class="screen">
 
