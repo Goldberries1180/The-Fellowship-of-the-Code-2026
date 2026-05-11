@@ -94,13 +94,49 @@
             </div>
             <div>
                 <label class="start-vote-info">Selected group members will be notified<br></label>
-                <button class="btn btn--primary" type="submit" id="btn-start-voting">Start vote</button>
+                <button class="btn btn--primary" type="button" id="btn-start-voting">Start vote</button>
             </div>
 
         </form>
     </div>
     <div id="screen-voting" class="screen">
-    <h1>Servas, hier konnsd voten</h1>
+        <main class="container vote-screen">
+
+            <a class="nav__back">
+                <img src="../assets/icons/back_icon.svg" alt="back">
+                Back
+            </a>
+
+            <section class="vote-content">
+                <h1 class="vote-title" id="vote-title"></h1>
+
+                <p class="vote-meta">
+                    Vote initiated by Frodo<br>
+                    3 of 9 voted
+                </p>
+
+                <p class="vote-instruction">Tap a route to select</p>
+
+                <div id="vote-options-cards" class="vote-options-cards"></div>
+
+                <label class="route-label reason-label" for="reason">
+                    Your reasoning (optional)
+                </label>
+
+                <textarea
+                        id="reason"
+                        class="input input--large reason-input"
+                        placeholder="I can deal with snow but hate Darkness"
+                ></textarea>
+
+                <a  class="btn btn--primary submit-vote" type="submit">
+                    Submit vote
+                </a>
+
+                <p class="vote-hint">Your vote will be visible to others</p>
+            </section>
+
+        </main>
     </div>
     <div id="screen-pending" class="screen">
 

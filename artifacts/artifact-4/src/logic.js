@@ -35,21 +35,45 @@ document.getElementById('btn-start-voting')
     .addEventListener('click', () => {
         showScreen('screen-voting');
     });
-function collectFormData(form) {
+function collectFormData() {
     state.decision.options = [
         {
-        name: document.getElementById('option1-name').value,
-        risks: document.getElementById('option1-risks').value,
-        source: document.getElementById('option1-source').value
+        name: document.getElementById('option1-name').value.trim(),
+        risks: document.getElementById('option1-risks').value.trim(),
+        source: document.getElementById('option1-source').value.trim()
         },
         {
-        name: document.getElementById('option2-name').value,
-        risks: document.getElementById('option2-risks').value,
-        source: document.getElementById('option2-source').value
+        name: document.getElementById('option2-name').value.trim(),
+        risks: document.getElementById('option2-risks').value.trim(),
+        source: document.getElementById('option2-source').value.trim()
         },
     ];
     state.decision.voters = Array.from(
         document.querySelectorAll('input[name="vote"]:checked')
     ).map(cb => cb.value);
 }
+document.getElementById('btn-start-voting')
+    .addEventListener('click', () => {
+        collectFormData();
+        renderVotingScreen();
+        showScreen('screen-voting');
+});
+function renderVotingScreen() {
+    document.getElementById('vote-title').textContent =
+        state.decision.options.map(o => o.name).join(' or ');
+
+const container = document.getElementById('vote-options-cards');
+    container.innerHTML = '';
+    state.decision.options.forEach(option => {
+        container.innerHTML += `
+        <label class="card card--voting vote-card">
+            <input type="radio" name="route" value="${option.name}">
+            <span class="vote-card__content">
+                <strong>${option.name}</strong>
+                <span>Known Risks: ${option.risks}</span>
+                <span>Source: ${option.source}</span>
+            </span>
+        </label>
+    `;
+    })}
 init();
