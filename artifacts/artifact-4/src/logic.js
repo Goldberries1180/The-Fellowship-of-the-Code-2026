@@ -35,6 +35,10 @@ document.getElementById('btn-start-voting')
     .addEventListener('click', () => {
         showScreen('screen-voting');
     });
+document.getElementById('criticality-toggle')
+    .addEventListener('change', (e) => {
+        state.decision.criticality = e.target.checked ? 'critical' : 'non-critical';
+    })
 function collectFormData() {
     state.decision.options = [
         {
@@ -48,9 +52,14 @@ function collectFormData() {
         source: document.getElementById('option2-source').value.trim()
         },
     ];
+
     state.decision.voters = Array.from(
         document.querySelectorAll('input[name="vote"]:checked')
     ).map(cb => cb.value);
+
+    // Deadline change based on criticality
+    const hours = state.decision.criticality === 'critical' ? 24 : 1;
+    state.decision.deadline = new Date(Date.now() + hours * 60 * 60 * 1000);
 }
 document.getElementById('btn-start-voting')
     .addEventListener('click', () => {
@@ -76,4 +85,33 @@ const container = document.getElementById('vote-options-cards');
         </label>
     `;
     })}
+document.getElementById('btn-submit-vote')
+    .addEventListener('click', () => {
+        const selected = document.querySelector('input[name="route"]:checked');
+        if (!selected) return;
+        const comment = document.getElementById('reason').value.trim();
+
+        state.votes[state.currentUser] = {
+            option: selected.value,
+            comment: comment
+        };
+        renderPendingScreen();
+        showScreen('screen-pending');
+    });
+function renderPendingScreen() {
+    document.getElementById('vote-title_pending').textContent =
+        state.decision.options.map(o => o.name).join(' or ');
+    document.getElementById('vote_init_pending').textContent = 'Vote initiated by ' + state.currentUser;
+    document.getElementById('currentUser_vote').textContent = state.votes[state.currentUser].option;
+    document.getElementById('collected_votes').textContent = Object.keys(state.votes).length;
+    document.getElementById('full_votes').textContent = state.decision.voters.length;
+    const percent = Math.round(Object.keys(state.votes).length / state.decision.voters.length * 100);
+    document.querySelector('.pending-bar__fill').style.width = percent + '%';
+    document.getElementById('percent_complete').textContent = percent + '% complete';
+    document.getElementById('vote_timer').textContent = 'Vote ends ' + state.decision.deadline.toLocaleTimeString();
+}
+document.getElementById('show_results')
+    .addEventListener('click', () => {
+        showScreen('screen-results');
+});
 init();

@@ -110,8 +110,8 @@
             <section class="vote-content">
                 <h1 class="vote-title" id="vote-title"></h1>
 
-                <p class="vote-meta">
-                    Vote initiated by Frodo<br>
+                <p class="vote-meta" id="vote-init">
+                    Vote initiated by <br>
                     3 of 9 voted
                 </p>
 
@@ -129,7 +129,7 @@
                         placeholder="I can deal with snow but hate Darkness"
                 ></textarea>
 
-                <a  class="btn btn--primary submit-vote" type="submit">
+                <a  class="btn btn--primary submit-vote" type="button" id="btn-submit-vote">
                     Submit vote
                 </a>
 
@@ -139,10 +139,98 @@
         </main>
     </div>
     <div id="screen-pending" class="screen">
+        <main class="container pending-screen">
 
+            <section class="pending-content">
+
+                <h2 class="card-headline" id="vote-title_pending"></h2>
+
+                <p class="route-sub-header" id="vote_init_pending">Vote initiated by</p>
+
+                <p class="route-sub-header">
+                    You voted for
+                    <span id="currentUser_vote" class="pending-vote-choice"></span>
+                </p>
+
+                <p class="route-sub-header">
+                    Waiting for everyone to finish voting...
+                </p>
+
+                <!-- PROGRESS -->
+                <div class="pending-progress">
+                    <p class="pending-count">
+                        <span class="pending-count__number" id="collected_votes">4</span>
+                        <span class="pending-count__label">of</span>
+                        <span class="pending-count__number" id="full_votes">9</span>
+                        <span class="pending-count__label">voted</span>
+                    </p>
+
+                    <div class="pending-bar">
+                        <div class="pending-bar__fill"></div>
+                    </div>
+
+                    <p class="route-sub-header" id="percent_complete">44% complete</p>
+                </div>
+
+                <!-- TIMER -->
+                <div class="pending-timer">
+                    <p class="route-sub-header">Voting will end in</p>
+                    <p class="pending-timer__value" id="vote_timer">00:08:22</p>
+                </div>
+
+                <a type="button" class="btn btn--primary" id="show_results">See results</a>
+
+            </section>
+
+        </main>
     </div>
     <div id="screen-results" class="screen">
+        <main class="results-page">
+            <h1 class="results-page__title">The Path is Chosen</h1>
 
+            <article class="card card--results is-chosen result-card">
+                <div class="result-card__content">
+                    <div class="result-card__left">
+                        <span class="result-card__badge">Chosen</span>
+                        <h2 class="result-card__route-type">Chosen Route</h2>
+                        <p class="result-card__route-name">Caradhras</p>
+                    </div>
+
+                    <div class="result-card__right">
+                        <strong class="result-card__votes">6 votes</strong>
+                        <button class="result-card__details" type="button" aria-label="Expand for details">
+                            <span>Expand for details</span>
+                            <svg class="result-card__details-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card card--results is-lost result-card">
+                <div class="result-card__content">
+                    <div class="result-card__left">
+                        <h2 class="result-card__route-type">Alternative Route</h2>
+                        <p class="result-card__route-name">Moria</p>
+                    </div>
+
+                    <div class="result-card__right">
+                        <strong class="result-card__votes">3 votes</strong>
+                        <button class="result-card__details" type="button" aria-label="Expand for details">
+                            <span>Expand for details</span>
+                            <svg class="result-card__details-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <a href="new_voting.html" class="btn btn--secondary results-page__button" type="button">
+                + Create new decision
+            </a>
+        </main>
     </div>
 <script src="logic.js"></script>
 </body>
