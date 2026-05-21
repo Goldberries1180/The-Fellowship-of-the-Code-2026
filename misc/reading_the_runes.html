@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbit Rations Tracker</title>     
+</head>
+<body>   
+    <h1>Hobbit Rations Tracker</h1>
+
+
+    <p id='status'></p>
+    <!--Status wird über JavaScript aktualisiert-->
+
+    <!--User Input-->
+    <input type="number" id='rationInput' placeholder='Enter rations' min="1">   
+    
+    <!--Buttons-->
+    <button id="eat">Eat Ration</button>
+    <button id="add">Add Ration</button>
+
+    <script>
+        
+        let rations = 10; //Initiale Rationen
+        const statusElement = document.getElementById('status');
+        const rationInput = document.getElementById('rationInput');
+        const eatButton = document.getElementById('eat');
+        const addButton = document.getElementById('add');
+
+        //Funktion zum Aktualisieren des Status
+        function updateStatus() {
+            statusElement.textContent = `Current Rations: ${rations}`;
+            if (rations==0) {
+                eatButton.disabled = true; //Deaktivieren des "Eat Ration" Buttons, wenn keine Rationen mehr übrig sind
+            }
+            else {
+                    eatButton.disabled = false; //Aktivieren des "Eat Ration" Buttons, wenn Rationen vorhanden sind
+            }
+            }
+
+    
+        updateStatus(); //Initialer Status
+
+        //Event Listener für "Eat Ration" Button 
+        
+        eatButton.addEventListener('click', () => {
+            if (rations >= rationInput.valueAsNumber) { //Überprüfen, ob genügend Rationen vorhanden sind
+                rations = rations - rationInput.valueAsNumber; //Rationen aktualisieren
+                updateStatus();
+            }            
+            else {
+                alert("Not enough rations to eat!");
+            }
+            rationInput.value = ''; //Input-Feld leeren
+        });
+
+        //Event Listener für "Add Ration" Button
+        addButton.addEventListener('click', () => {
+            rations = rations + rationInput.valueAsNumber; //Rationen aktualisieren
+            updateStatus();
+            rationInput.value = ''; //Input-Feld leeren
+        });
+    </script>
+</body>
+
+</html>
