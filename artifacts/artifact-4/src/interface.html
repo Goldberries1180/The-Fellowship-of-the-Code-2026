@@ -44,6 +44,7 @@
                 <label class="card-headline">Who should vote?</label><br>
                 <div class="checkbox-grid" id="checkbox-grid"></div>
             </div>
+            <div class="options-container">
             <div class="route-options">
                 <label class="route-label">Option 1<br><input class="option_name input input--small" id="option1-name" type="text" placeholder="Enter Route Name"></label><br>
                 <label class="route-label">Known Risks<br>
@@ -65,6 +66,7 @@
                     <select name="source" class="source-select" id="option2-source">
                     </select>
                 </label><br>
+            </div>
             </div>
             <div>
                 <label class="start-vote-info">Selected group members will be notified<br></label>
@@ -98,9 +100,9 @@
                         placeholder="Your reasoning (optional)"
                 ></textarea>
 
-                <a class="btn btn--primary submit-vote" type="button" id="btn-submit-vote">
+                <button class="btn btn--primary submit-vote" type="button" id="btn-submit-vote">
                     Submit vote
-                </a>
+                </button>
 
                 <p class="vote-hint">Your vote will be visible to others</p>
             </section>

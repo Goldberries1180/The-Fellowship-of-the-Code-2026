@@ -19,6 +19,17 @@ body {
 
     padding: 40px 25px 64px;
 }
+@media (min-width: 768px) {
+    .options-container {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
+    .route-options {
+        flex: 1;
+        width: auto;
+    }
+}
 
 /* =========================
    BASE
@@ -249,6 +260,7 @@ header {
 /* Filled */
 .input:not(:placeholder-shown) {
     color: var(--color-text);
+    font-weight: 600;
 }
 
 

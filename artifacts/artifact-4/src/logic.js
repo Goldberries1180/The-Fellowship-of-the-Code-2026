@@ -29,6 +29,39 @@ const state = {
 
 
 // ============================================================
+// HELPERS
+// ============================================================
+
+function getVoteStats() {
+    const voted = Object.keys(state.votes).length;
+    const total = state.decision.voters.length;
+    return {
+        initiator: state.decision.initiator,
+        voted,
+        total,
+        percent: total > 0 ? Math.round((voted / total) * 100) : 0,
+        title: state.decision.options.map(o => o.name).join(' or ')
+    };
+}
+
+function getTimeRemaining() {
+    return Math.max(0, Math.ceil((new Date(state.decision.deadline) - new Date()) / 1000));
+}
+
+function formatTimeRemaining(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return String(minutes).padStart(2, '0') + ':' + String(secs).padStart(2, '0');
+}
+
+function isVoteFinished() {
+    const allVoted = Object.keys(state.votes).length >= state.decision.voters.length;
+    const timeUp = getTimeRemaining() <= 0;
+    return allVoted || timeUp;
+}
+
+
+// ============================================================
 // SCREEN MANAGEMENT
 // ============================================================
 
@@ -68,31 +101,12 @@ function collectFormData() {
         }
     ];
 
-    // Voters: all Fellowship if critical, else selected checkboxes
     state.decision.voters = state.decision.criticality === 'critical'
         ? [...FELLOWSHIP]
         : Array.from(document.querySelectorAll('input[name="vote"]:checked')).map(cb => cb.value);
 
-    // Deadline: 24h if critical, 1h if non-critical
     const minutes = state.decision.criticality === 'critical' ? 1 : 5;
     state.decision.deadline = new Date(Date.now() + minutes * 60 * 1000);
-}
-
-
-// ============================================================
-// VOTE STATS (shared between render functions)
-// ============================================================
-
-function getVoteStats() {
-    const voted = Object.keys(state.votes).length;
-    const total = state.decision.voters.length;
-    return {
-        initiator: state.decision.initiator,
-        voted,
-        total,
-        percent: total > 0 ? Math.round((voted / total) * 100) : 0,
-        title: state.decision.options.map(o => o.name).join(' or ')
-    };
 }
 
 
@@ -107,6 +121,9 @@ function renderVotingScreen() {
     document.getElementById('vote-count').textContent = stats.voted;
     document.getElementById('vote-total').textContent = stats.total;
 
+    // Reset submit button
+    document.getElementById('btn-submit-vote').disabled = true;
+
     const container = document.getElementById('vote-options-cards');
     container.innerHTML = '';
     state.decision.options.forEach(option => {
@@ -120,6 +137,13 @@ function renderVotingScreen() {
                 </span>
             </label>
         `;
+    });
+
+    // Enable submit button when option is selected
+    document.querySelectorAll('input[name="route"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+            document.getElementById('btn-submit-vote').disabled = false;
+        });
     });
 }
 
@@ -147,23 +171,11 @@ function renderPendingScreen() {
 
 let voteInterval;
 
-function getTimeRemaining() {
-    return Math.max(0, Math.ceil((new Date(state.decision.deadline) - new Date()) / 1000));
-}
-
-function formatTimeRemaining(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return String(minutes).padStart(2, '0') + ':' + String(secs).padStart(2, '0');
-}
-
 function updateVoteTimer() {
     const remainingSeconds = getTimeRemaining();
-    const allVotesSubmitted = Object.keys(state.votes).length >= state.decision.voters.length;
-
     document.getElementById('vote_timer').textContent = formatTimeRemaining(remainingSeconds);
 
-    if (remainingSeconds <= 0 || allVotesSubmitted) {
+    if (isVoteFinished()) {
         clearInterval(voteInterval);
         renderResultsScreen();
         showScreen('screen-results');
@@ -192,12 +204,14 @@ function resolveVotes() {
         state.result = {
             winner: (frodoVote && frodoIsVoter) ? frodoVote.option : firstName,
             tiebreak: true,
-            tiebreakByFrodo: frodoIsVoter && !!frodoVote
+            tiebreakByFrodo: frodoIsVoter && !!frodoVote,
+            timestamp: new Date()
         };
     } else {
         state.result = {
             winner: firstName,
-            tiebreak: false
+            tiebreak: false,
+            timestamp: new Date()
         };
     }
 }
@@ -209,18 +223,14 @@ function resolveVotes() {
 
 function renderResultsScreen() {
     resolveVotes();
-    const allVoted = Object.keys(state.votes).length >= state.decision.voters.length;
-    const timeUp = getTimeRemaining() <= 0;
-    const voteFinished = allVoted || timeUp;
+
+    const voteFinished = isVoteFinished();
 
     const counts = {};
     state.decision.options.forEach(o => counts[o.name] = 0);
     Object.values(state.votes).forEach(v => {
         if (counts[v.option] !== undefined) counts[v.option]++;
     });
-    document.getElementById('results-title').textContent = voteFinished
-    ? 'The Path is Chosen'
-        : 'Current Standings';
 
     const winner = state.result.winner;
 
@@ -230,6 +240,12 @@ function renderResultsScreen() {
         return counts[b.name] - counts[a.name];
     });
 
+    // Title
+    document.getElementById('results-title').textContent = voteFinished
+        ? 'The Path is Chosen'
+        : 'Current Standings';
+
+    // Cards
     const container = document.getElementById('result-cards-container');
     container.innerHTML = '';
     sortedOptions.forEach(option => {
@@ -250,14 +266,19 @@ function renderResultsScreen() {
         `;
     });
 
+    // Tiebreak note
     document.getElementById('result-tiebreak').textContent = state.result.tiebreak
         ? state.result.tiebreakByFrodo
             ? 'Tie broken by Frodo.'
             : 'Tie – first option chosen by default.'
         : '';
 
-    document.getElementById('result-timestamp').textContent =
-        'Decision recorded at ' + new Date().toLocaleTimeString();
+    // Timestamp – only when finished
+    document.getElementById('result-timestamp').textContent = voteFinished
+        ? 'Decision recorded at ' + state.result.timestamp.toLocaleTimeString()
+        : '';
+
+    // New decision button – only when finished
     document.getElementById('btn-new-decision').style.display = voteFinished ? 'block' : 'none';
 }
 
@@ -382,6 +403,7 @@ document.getElementById('btn-new-decision')
         state.votes = {};
         state.result = {};
         showScreen('screen-new-vote');
+        validateForm();
     });
 
 // User switcher (F2)
@@ -397,11 +419,7 @@ document.getElementById('user-select')
         document.getElementById('current-user-badge').textContent = state.currentUser;
 
         if (state.decision.voters.length > 0) {
-            const allVoted = Object.keys(state.votes).length >= state.decision.voters.length;
-            const timeUp = getTimeRemaining() <= 0;
-            const voteFinished = allVoted || timeUp;
-
-            if (voteFinished) {
+            if (isVoteFinished()) {
                 renderResultsScreen();
                 showScreen('screen-results');
             } else if (!state.decision.voters.includes(state.currentUser)) {
