@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c85f81f0-6d3a-4084-806e-5b359282120f" name="Changes" comment="paar fixes, inline css entfernt, meta viewport">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/artifact-4/src/interface.html" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-4/src/interface.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artifacts/artifact-3/assets/images/Background_1.webp" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-3/assets/images/Background_1.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artifacts/artifact-3/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-3/src/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/artifacts/artifact-4/src/logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-4/src/logic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +82,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "janaprobiertstuff",
+    "git-widget-placeholder": "Merging janaprobiertstuff",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/janakrautgartner/The-Fellowship-of-the-Code-2026/artifacts/artifact-4",
     "list.type.of.created.stylesheet": "CSS",
@@ -163,7 +164,7 @@
       <workItem from="1777206901262" duration="33931000" />
       <workItem from="1777923842014" duration="13451000" />
       <workItem from="1778076707966" duration="3058000" />
-      <workItem from="1778314228916" duration="20500000" />
+      <workItem from="1778314228916" duration="28492000" />
     </task>
     <task id="LOCAL-00001" summary="first html try in a long time. wireframe1">
       <option name="closed" value="true" />
