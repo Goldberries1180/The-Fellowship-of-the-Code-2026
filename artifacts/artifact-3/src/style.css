@@ -1,6 +1,4 @@
-html {
-    scrollbar-gutter: stable;
-}
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -9,7 +7,15 @@ body {
 
     background-color: #1A1612;
 
-    padding-bottom: 64px;
+    background:
+        linear-gradient(rgba(26,22,18,0.7), rgba(26,22,18,0.7)),
+        url("../assets/images/Background_1.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 40px 25px 64px;
 }
 
 /* =========================
@@ -101,7 +107,6 @@ header {
 .btn--secondary {
     background: var(--color-bg-elements);
     border: 1px solid var(--color-primary);
-    text-decoration: none;
 }
 
 .btn--secondary:hover {
@@ -450,11 +455,10 @@ header {
 }
 
 /* Bottom Navigation */
-/* Bottom Navigation */
 .bottomnav {
     position: fixed;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
 
     width: 100%;
@@ -478,6 +482,9 @@ header {
 
     padding: 0 clamp(16px, 6vw, 32px);
     box-sizing: border-box;
+
+    background: var(--color-bg-elements);
+    border-top: 1px solid var(--color-outline-soft);
 }
 
 .bottomnav__button {
@@ -496,6 +503,7 @@ header {
     background: transparent;
 
     color: #E8E3D6;
+
     cursor: pointer;
 }
 
@@ -1055,4 +1063,46 @@ textarea::placeholder {
     width: 52px;
     height: 52px;
     display: block;
+}
+.user-switcher {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 16px;
+    z-index: 9999;
+    background: var(--color-bg-elements);
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.user-switcher.is-visible {
+    display: block;
+}
+.user-name {
+    color: var(--color-text);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.user-switcher__hint {
+    color: var(--color-light-grey);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.user-switcher__button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.user-switcher__label {
+    color: var(--color-light-grey);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.user-switcher__button img {
+    width: 24px;
+    height: 24px;
 }

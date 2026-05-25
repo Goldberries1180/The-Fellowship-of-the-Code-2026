@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fellowship Companion</title>
+    <link rel="icon" type="image/svg+xml" href="../../artifact-3/assets/icons/compass_dark.svg">
+    <link rel="preload" as="image" href="../../artifact-3/assets/images/Background_1.webp">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="screen-empty" class="screen">
+        <h1 class="empty-screen__title">No decisions yet</h1>
+        <p class="empty-screen__text">The Fellowship hasn't made any route decisions yet. Create your first decision to guide the journey through Middle Earth.</p>
+        <button id="new-vote-button" class="btn btn--primary">New Decision</button>
+    </div>
+    <div id="screen-new-vote" class="screen">
+        <header>
+            <button class="nav__back" id="btn-back-to-empty">
+                <img src="../assets/icons/back_icon.svg" alt="back">
+                Back
+            </button>
+            <p class="route-header">New Route Decision</p>
+            <p class="route-sub-header">Add route option for voting</p>
+        </header>
+
+        <form>
+            <div class="switch-container">
+                <img class="info-icon" src="../assets/icons/info_icon.svg" alt="Info to Criticality Selection" title="The vote span for critical votes is 24 hours and everyone is selected to vote">
+                <input type="checkbox" id="criticality-toggle" class="switch-toggle">
+                <label class="new-switch" for="criticality-toggle">
+                    <span class="new-switch__option new-switch__option--active">Non-Critical</span>
+                    <span class="new-switch__option new-switch__option--inactive">Critical</span>
+                </label>
+            </div>
+            <div class="route-options">
+                <label class="card-headline">Who should vote?</label><br>
+                <div class="checkbox-grid">
+                    <div class="checkbox-column">
+                        <label><input type="checkbox" name="vote" value="Gandalf">Gandalf</label>
+                        <label><input type="checkbox" name="vote" value="Frodo">Frodo</label>
+                        <label><input type="checkbox" name="vote" value="Sam">Sam</label>
+                        <label><input type="checkbox" name="vote" value="Aragorn">Aragorn</label>
+                        <label><input type="checkbox" name="vote" value="Legolas">Legolas</label>
+                    </div>
+                    <div class="checkbox-column">
+                        <label><input type="checkbox" name="vote" value="Gimli">Gimli</label>
+                        <label><input type="checkbox" name="vote" value="Boromir">Boromir</label>
+                        <label><input type="checkbox" name="vote" value="Pippin">Pippin</label>
+                        <label><input type="checkbox" name="vote" value="Merry">Merry</label>
+                    </div>
+                </div>
+            </div>
+            <div class="route-options">
+                <label class="route-label">Option 1<br><input class="option_name input input--small" id="option1-name" type="text" placeholder="Enter Route Name"></label><br>
+                <label class="route-label">Known Risks<br>
+                    <textarea class="risks-area input input--large" id="option1-risks" placeholder="Known Risks"></textarea>
+                </label><br>
+                <label class="route-label">Source<br>
+                    <select name="source" class="source-select" id="option1-source">
+                        <option value="Gandalf">Gandalf</option>
+                        <option value="Frodo">Frodo</option>
+                        <option value="Sam">Sam</option>
+                        <option value="Aragorn">Aragorn</option>
+                        <option value="Legolas">Legolas</option>
+                        <option value="Gimli">Gimli</option>
+                        <option value="Boromir">Boromir</option>
+                        <option value="Pippin">Pippin</option>
+                        <option value="Merry">Merry</option>
+                    </select>
+                </label><br>
+            </div>
+            <div class="route-options">
+                <label class="route-label">Option 2<br>
+                    <input class="option_name input input--small" id="option2-name" type="text" placeholder="Route Option 2">
+                </label><br>
+                <label class="route-label">Known Risks<br>
+                    <textarea class="risks-area input input--large" id="option2-risks" placeholder="Known Risks"></textarea>
+                </label><br>
+                <label class="route-label">Source<br>
+                    <select name="source" class="source-select" id="option2-source">
+                        <option value="Gandalf">Gandalf</option>
+                        <option value="Frodo">Frodo</option>
+                        <option value="Sam">Sam</option>
+                        <option value="Aragorn">Aragorn</option>
+                        <option value="Legolas">Legolas</option>
+                        <option value="Gimli">Gimli</option>
+                        <option value="Boromir">Boromir</option>
+                        <option value="Pippin">Pippin</option>
+                        <option value="Merry">Merry</option>
+                    </select>
+                </label><br>
+            </div>
+            <div>
+                <label class="start-vote-info">Selected group members will be notified<br></label>
+                <button class="btn btn--primary" type="button" id="btn-start-voting">Start vote</button>
+            </div>
+
+        </form>
+    </div>
+    <div id="screen-voting" class="screen">
+        <main class="container vote-screen">
+
+            <a class="nav__back">
+                <img src="../assets/icons/back_icon.svg" alt="back">
+                Back
+            </a>
+
+            <section class="vote-content">
+                <h1 class="vote-title" id="vote-title"></h1>
+
+                <p class="vote-meta" id="vote-init">
+                    Vote initiated by <br>
+                    3 of 9 voted
+                </p>
+
+                <p class="vote-instruction">Tap a route to select</p>
+
+                <div id="vote-options-cards" class="vote-options-cards"></div>
+
+                <label class="route-label reason-label" for="reason">
+                    Your reasoning (optional)
+                </label>
+
+                <textarea
+                        id="reason"
+                        class="input input--large reason-input"
+                        placeholder="I can deal with snow but hate Darkness"
+                ></textarea>
+
+                <a  class="btn btn--primary submit-vote" type="button" id="btn-submit-vote">
+                    Submit vote
+                </a>
+
+                <p class="vote-hint">Your vote will be visible to others</p>
+            </section>
+
+        </main>
+    </div>
+    <div id="screen-pending" class="screen">
+        <main class="container pending-screen">
+
+            <section class="pending-content">
+
+                <h2 class="card-headline" id="vote-title_pending"></h2>
+
+                <p class="route-sub-header" id="vote_init_pending">Vote initiated by</p>
+
+                <p class="route-sub-header">
+                    You voted for
+                    <span id="currentUser_vote" class="pending-vote-choice"></span>
+                </p>
+
+                <p class="route-sub-header">
+                    Waiting for everyone to finish voting...
+                </p>
+
+                <!-- PROGRESS -->
+                <div class="pending-progress">
+                    <p class="pending-count">
+                        <span class="pending-count__number" id="collected_votes">4</span>
+                        <span class="pending-count__label">of</span>
+                        <span class="pending-count__number" id="full_votes">9</span>
+                        <span class="pending-count__label">voted</span>
+                    </p>
+
+                    <div class="pending-bar">
+                        <div class="pending-bar__fill"></div>
+                    </div>
+
+                    <p class="route-sub-header" id="percent_complete">44% complete</p>
+                </div>
+
+                <!-- TIMER -->
+                <div class="pending-timer">
+                    <p class="route-sub-header">Voting will end in</p>
+                    <p class="pending-timer__value" id="vote_timer">00:08:22</p>
+                </div>
+
+                <a type="button" class="btn btn--primary" id="show_results">See results</a>
+
+            </section>
+
+        </main>
+    </div>
+    <div id="screen-results" class="screen">
+        <main class="results-page">
+            <h1 class="results-page__title">The Path is Chosen</h1>
+
+            <article class="card card--results is-chosen result-card">
+                <div class="result-card__content">
+                    <div class="result-card__left">
+                        <span class="result-card__badge">Chosen</span>
+                        <h2 class="result-card__route-type">Chosen Route</h2>
+                        <p class="result-card__route-name">Caradhras</p>
+                    </div>
+
+                    <div class="result-card__right">
+                        <strong class="result-card__votes">6 votes</strong>
+                        <button class="result-card__details" type="button" aria-label="Expand for details">
+                            <span>Expand for details</span>
+                            <svg class="result-card__details-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card card--results is-lost result-card">
+                <div class="result-card__content">
+                    <div class="result-card__left">
+                        <h2 class="result-card__route-type">Alternative Route</h2>
+                        <p class="result-card__route-name">Moria</p>
+                    </div>
+
+                    <div class="result-card__right">
+                        <strong class="result-card__votes">3 votes</strong>
+                        <button class="result-card__details" type="button" aria-label="Expand for details">
+                            <span>Expand for details</span>
+                            <svg class="result-card__details-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <a href="new_voting.html" class="btn btn--secondary results-page__button" type="button">
+                + Create new decision
+            </a>
+        </main>
+    </div>
+<script src="logic.js"></script>
+</body>
+</html>
