@@ -15,6 +15,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 
     padding: 40px 25px 64px;
 }
@@ -64,6 +65,7 @@ header {
 /* Screens for JS Logic */
 .screen {
     display: none;
+    padding-bottom: 80px;
 }
 .screen.is-active {
     display: block;
@@ -750,6 +752,7 @@ input[type="checkbox"]:checked {
     background-position: right 16px center;
 }
 .card-headline {
+    display: block;
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;

@@ -397,7 +397,14 @@ document.getElementById('user-select')
         document.getElementById('current-user-badge').textContent = state.currentUser;
 
         if (state.decision.voters.length > 0) {
-            if (!state.decision.voters.includes(state.currentUser)) {
+            const allVoted = Object.keys(state.votes).length >= state.decision.voters.length;
+            const timeUp = getTimeRemaining() <= 0;
+            const voteFinished = allVoted || timeUp;
+
+            if (voteFinished) {
+                renderResultsScreen();
+                showScreen('screen-results');
+            } else if (!state.decision.voters.includes(state.currentUser)) {
                 showScreen('screen-empty');
             } else if (state.votes[state.currentUser]) {
                 renderPendingScreen();
