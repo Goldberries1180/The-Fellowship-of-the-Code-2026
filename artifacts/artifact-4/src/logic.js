@@ -359,6 +359,21 @@ document.getElementById('btn-new-decision').addEventListener('click', () => {
     state.decision = { initiator: null, criticality: 'non-critical', options: [], voters: [], deadline: null };
     state.votes = {};
     state.result = {};
+
+    // clear all form fields
+    document.getElementById('option1-name').value = '';
+    document.getElementById('option1-risks').value = '';
+    document.getElementById('option2-name').value = '';
+    document.getElementById('option2-risks').value = '';
+    document.getElementById('reason').value = '';
+
+    // reset criticality toggle
+    document.getElementById('criticality-toggle').checked = false;
+    document.getElementById('voter-selection').classList.remove('is-hidden');
+
+    // select all checkboxes
+    document.querySelectorAll('input[name="vote"]').forEach(cb => cb.checked = true);
+
     showScreen('screen-new-vote');
     validateForm();
 });
