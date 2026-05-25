@@ -354,7 +354,7 @@ document.getElementById('btn-back-to-empty')
 const criticalityToggle = document.getElementById('criticality-toggle');
 criticalityToggle.addEventListener('change', (e) => {
     state.decision.criticality = e.target.checked ? 'critical' : 'non-critical';
-    document.getElementById('voter-selection').style.display = e.target.checked ? 'none' : 'block';
+    document.getElementById('voter-selection').classList.toggle('is-hidden', e.target.checked);
     validateForm();
 });
 
@@ -433,7 +433,45 @@ document.getElementById('user-select')
             }
         }
     });
+// ============================================================
+// EASTER EGG: TOM BOMBADIL MODE
+// ============================================================
 
+let tomActive = false;
+
+document.getElementById('tom-input').addEventListener('input', (e) => {
+    if (e.target.value.toLowerCase() === 'bombadil') {
+        activateTomMode();
+        e.target.value = '';
+    }
+});
+
+function activateTomMode() {
+    tomActive = true;
+    document.body.style.backgroundImage = `
+        linear-gradient(rgba(26,22,18,0.4), rgba(26,22,18,0.4)),
+        url('../assets/images/tom_bombadil.webp')
+    `;
+    const audio = new Audio('../assets/heydol.mp3');
+    audio.loop = true;
+    audio.play();
+    window.tomAudio = audio;
+
+    setTimeout(() => {
+        const answer = prompt('Who is the real hero of LOTR?');
+        if (answer && answer.trim().toLowerCase() === 'sam') {
+            deactivateTomMode();
+        }
+    }, 3500);
+}
+function deactivateTomMode() {
+    tomActive = false;
+    document.body.style.backgroundImage = '';
+    if (window.tomAudio) {
+        window.tomAudio.pause();
+        window.tomAudio = null;
+    }
+}
 
 // ============================================================
 // INIT
