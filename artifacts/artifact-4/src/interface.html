@@ -158,50 +158,16 @@
     </div>
     <div id="screen-results" class="screen">
         <main class="results-page">
-            <h1 class="results-page__title">The Path is Chosen</h1>
+            <h1 class="results-page__title" id="results-title">The Path is Chosen</h1>
 
-            <article class="card card--results is-chosen result-card">
-                <div class="result-card__content">
-                    <div class="result-card__left">
-                        <span class="result-card__badge">Chosen</span>
-                        <h2 class="result-card__route-type">Chosen Route</h2>
-                        <p class="result-card__route-name">Caradhras</p>
-                    </div>
+            <div id="result-cards-container"></div>
 
-                    <div class="result-card__right">
-                        <strong class="result-card__votes">6 votes</strong>
-                        <button class="result-card__details" type="button" aria-label="Expand for details">
-                            <span>Expand for details</span>
-                            <svg class="result-card__details-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M6 9l6 6 6-6" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
+            <p class="route-sub-header" id="result-tiebreak"></p>
+            <p class="route-sub-header" id="result-timestamp"></p>
 
-            <article class="card card--results is-lost result-card">
-                <div class="result-card__content">
-                    <div class="result-card__left">
-                        <h2 class="result-card__route-type">Alternative Route</h2>
-                        <p class="result-card__route-name">Moria</p>
-                    </div>
-
-                    <div class="result-card__right">
-                        <strong class="result-card__votes">3 votes</strong>
-                        <button class="result-card__details" type="button" aria-label="Expand for details">
-                            <span>Expand for details</span>
-                            <svg class="result-card__details-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M6 9l6 6 6-6" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <a href="new_voting.html" class="btn btn--secondary results-page__button" type="button">
+            <button class="btn btn--secondary results-page__button" id="btn-new-decision">
                 + Create new decision
-            </a>
+            </button>
         </main>
     </div>
 <nav class="bottomnav">
