@@ -9,7 +9,14 @@ body {
 
     background-color: #1A1612;
 
-    padding-bottom: 64px;
+    background:
+        linear-gradient(rgba(26,22,18,0.7), rgba(26,22,18,0.7)),
+        url("../assets/images/Background_1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 40px 25px 64px;
 }
 
 /* =========================
@@ -67,9 +74,10 @@ header {
 ========================= */
 
 .btn {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
     padding: 10px 25px;
     height: 48px;
     width: 100%;
@@ -485,6 +493,9 @@ header {
 
     padding: 0 clamp(16px, 6vw, 32px);
     box-sizing: border-box;
+
+    background: var(--color-bg-elements);
+    border-top: 1px solid var(--color-outline-soft);
 }
 
 .bottomnav__button {
@@ -585,11 +596,14 @@ body.screen-empty {
 }
 .switch-container {
     position: relative;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
 }
 .info-icon {
     position: absolute;
     top: -24px;
-    right: 0;
+    right: -10px;
 }
 .info-icon:hover {
     cursor: pointer;
@@ -598,7 +612,8 @@ body.screen-empty {
     display: none;
 }
 .new-switch {
-    width: 340px;
+    width: 100%;
+    max-width: 340px;
     height: 52px;
     padding: 0 5px;
     position: relative;
@@ -608,7 +623,7 @@ body.screen-empty {
     justify-content: center;
     align-items: center;
     display: flex;
-    margin: 20px auto;
+    margin: 20px 0;
     box-sizing: content-box;
 }
 
@@ -1024,6 +1039,8 @@ textarea::placeholder {
 /* ===================== */
 
 .empty-screen {
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
@@ -1074,7 +1091,18 @@ textarea::placeholder {
     border-radius: 8px;
     padding: 12px;
 }
-
+.current-user-badge {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 9999;
+    background: var(--color-bg-elements);
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 12px;
+    color: var(--color-text);
+}
 .user-switcher.is-visible {
     display: block;
 }

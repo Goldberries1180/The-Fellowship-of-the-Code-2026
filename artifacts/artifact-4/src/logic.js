@@ -22,6 +22,9 @@ function showScreen(screen) {
 }
 function init() {
     showScreen('screen-empty');
+    populateSourceDropdowns();
+    populateVoterCheckboxes();
+    populateUserSwitcher();
 }
 document.getElementById('new-vote-button')
     .addEventListener('click', () => {
@@ -31,14 +34,12 @@ document.getElementById('btn-back-to-empty')
     .addEventListener('click', () => {
         showScreen('screen-empty');
 });
-document.getElementById('btn-start-voting')
-    .addEventListener('click', () => {
-        showScreen('screen-voting');
-    });
-document.getElementById('criticality-toggle')
-    .addEventListener('change', (e) => {
+
+const criticalityToggle = document.getElementById('criticality-toggle'); //Set Deadline for Voting depending on critical-setting
+    criticalityToggle.addEventListener('change', (e) => {
         state.decision.criticality = e.target.checked ? 'critical' : 'non-critical';
-    })
+        document.getElementById('voter-selection').style.display = e.target.checked ? 'none' : 'block';
+    });
 function collectFormData() {
     state.decision.options = [
         {
@@ -53,10 +54,14 @@ function collectFormData() {
         },
     ];
 
-    state.decision.voters = Array.from(
-        document.querySelectorAll('input[name="vote"]:checked')
-    ).map(cb => cb.value);
-
+    if (state.decision.criticality === 'critical') {
+        state.decision.voters = FELLOWSHIP;
+    }
+    else {
+        state.decision.voters = Array.from(
+            document.querySelectorAll('input[name="vote"]:checked')
+        ).map(cb => cb.value);
+    }
     // Deadline change based on criticality
     const hours = state.decision.criticality === 'critical' ? 24 : 1;
     state.decision.deadline = new Date(Date.now() + hours * 60 * 60 * 1000);
@@ -66,10 +71,25 @@ document.getElementById('btn-start-voting')
         collectFormData();
         renderVotingScreen();
         showScreen('screen-voting');
+
+        const voteDurationSeconds = criticalityToggle.checked ? 60 : 300;
+        state.decision.deadline = new Date(Date.now() + voteDurationSeconds * 1000);
 });
+function getVoteStats() {
+    return {
+        initiator: state.currentUser,
+        voted: Object.keys(state.votes).length,
+        total: state.decision.voters.length,
+        percent: Math.round(Object.keys(state.votes).length / state.decision.voters.length * 100),
+        title: state.decision.options.map(o => o.name).join(' or ')
+    };
+}
 function renderVotingScreen() {
-    document.getElementById('vote-title').textContent =
-        state.decision.options.map(o => o.name).join(' or ');
+    const stats = getVoteStats();
+    document.getElementById('vote-title').textContent = stats.title;
+    document.getElementById('vote-initiator').textContent = stats.initiator;
+    document.getElementById('vote-count').textContent = stats.voted;
+    document.getElementById('vote-total').textContent = stats.total;
 
 const container = document.getElementById('vote-options-cards');
     container.innerHTML = '';
@@ -98,9 +118,8 @@ document.getElementById('btn-submit-vote')
             option: selected.value,
             comment: comment
         };
-        const criticalityToggle = document.getElementById('criticality-toggle'); //Set Deadline for Voting depending on critical-setting
-        const voteDurationSeconds = criticalityToggle.checked ? 60 : 300;
-        state.decision.deadline = new Date(Date.now() + voteDurationSeconds * 1000);
+
+
 
         renderPendingScreen();
         showScreen('screen-pending');
@@ -136,19 +155,89 @@ function updateVoteTimer() {
 }
 
 function renderPendingScreen() {
-    document.getElementById('vote-title_pending').textContent =
-        state.decision.options.map(o => o.name).join(' or ');
-    document.getElementById('vote_init_pending').textContent = 'Vote initiated by ' + state.currentUser;
+    const stats = getVoteStats();
+    document.getElementById('vote-title_pending').textContent = stats.title;
+    document.getElementById('vote_init_pending').textContent = 'Vote initiated by ' + stats.initiator;
     document.getElementById('currentUser_vote').textContent = state.votes[state.currentUser].option;
-    document.getElementById('collected_votes').textContent = Object.keys(state.votes).length;
-    document.getElementById('full_votes').textContent = state.decision.voters.length;
-    const percent = Math.round(Object.keys(state.votes).length / state.decision.voters.length * 100);
-    document.querySelector('.pending-bar__fill').style.width = percent + '%';
-    document.getElementById('percent_complete').textContent = percent + '% complete';
+    document.getElementById('collected_votes').textContent = stats.voted;
+    document.getElementById('full_votes').textContent = stats.total;
+    document.querySelector('.pending-bar__fill').style.width = stats.percent + '%';
+    document.getElementById('percent_complete').textContent = stats.percent + '% complete';
     document.getElementById('vote_timer').textContent = 'Vote ends ' + state.decision.deadline.toLocaleTimeString();
 }
 document.getElementById('show_results')
     .addEventListener('click', () => {
         showScreen('screen-results');
 });
+function populateSourceDropdowns() {
+    ['option1-source', 'option2-source'].forEach(id => {
+        const select = document.getElementById(id);
+        FELLOWSHIP.forEach(member => {
+            const option = document.createElement('option');
+            option.value = member;
+            option.textContent = member;
+            select.appendChild(option);
+        });
+    })}
+function populateVoterCheckboxes() {
+    const grid = document.getElementById('checkbox-grid');
+    grid.innerHTML = '';
+
+    if (FELLOWSHIP.length <= 5) {
+        FELLOWSHIP.forEach(member => {
+            const label = document.createElement('label');
+            label.innerHTML = `<input type="checkbox" name="vote" value="${member}" checked>${member}></input>`;
+            grid.appendChild(label);
+        })
+    }
+    else {
+        const left =document.createElement('div');
+        left.className = 'checkbox-column';
+        const right = document.createElement('div');
+        right.className = 'checkbox-column';
+
+        const half = Math.ceil(FELLOWSHIP.length / 2);
+
+        FELLOWSHIP.forEach((member, i) => {
+            const label = document.createElement('label');
+            label.innerHTML = `<input type="checkbox" name="vote" value="${member}" checked>${member}</input>`;
+            if (i < half) left.appendChild(label);
+            else right.appendChild(label);
+        });
+        grid.appendChild(left);
+        grid.appendChild(right);
+    }
+}
+function populateUserSwitcher() {
+    const select = document.getElementById('user-select');
+    FELLOWSHIP.forEach(member => {
+        const option = document.createElement('option');
+        option.value = member;
+        option.textContent = member;
+        if (member === state.currentUser) option.selected = true;
+        select.appendChild(option);
+    });
+}
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'F2') {
+        document.getElementById('user-switcher').classList.toggle('is-visible');
+    }
+});
+document.getElementById('user-select')
+    .addEventListener('change', (e) => {
+        state.currentUser = e.target.value;
+        document.getElementById('current-user-badge').textContent = state.currentUser;
+
+    if (state.decision.voters.length > 0) {
+        if (!state.decision.voters.includes(state.currentUser)) {
+            showScreen('screen-empty');
+        } else if (state.votes[state.currentUser]) {
+            showScreen('screen-pending');
+            renderPendingScreen();
+        } else {
+            showScreen('screen-voting');
+            renderVotingScreen();
+        }
+    }
+    });
 init();

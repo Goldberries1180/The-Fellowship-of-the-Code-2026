@@ -11,9 +11,14 @@
 </head>
 <body>
     <div id="screen-empty" class="screen">
-        <h1 class="empty-screen__title">No decisions yet</h1>
-        <p class="empty-screen__text">The Fellowship hasn't made any route decisions yet. Create your first decision to guide the journey through Middle Earth.</p>
-        <button id="new-vote-button" class="btn btn--primary">New Decision</button>
+        <container id="empty-screen" class="empty-screen">
+            <div class="icon-emptystate">
+                <img src="../../artifact-3/assets/icons/compass_dark.svg" alt="Compass Icon">
+            </div>
+            <h1 class="empty-screen__title">No decisions yet</h1>
+            <p class="empty-screen__text">The Fellowship hasn't made any route decisions yet. Create your first decision to guide the journey through Middle Earth.</p>
+            <button id="new-vote-button" class="btn btn--primary">New Decision</button>
+        </container>
     </div>
     <div id="screen-new-vote" class="screen">
         <header>
@@ -27,30 +32,16 @@
 
         <form>
             <div class="switch-container">
-                <img class="info-icon" src="../assets/icons/info_icon.svg" alt="Info to Criticality Selection" title="The vote span for critical votes is 24 hours and everyone is selected to vote">
+                <img class="info-icon" src="../assets/icons/info_icon.svg" alt="Info to Criticality Selection" title="The vote span for critical votes is 1 minute and everyone is selected to vote. Non-critical votes last 5 minutes and voters can be selected.">
                 <input type="checkbox" id="criticality-toggle" class="switch-toggle">
                 <label class="new-switch" for="criticality-toggle">
                     <span class="new-switch__option new-switch__option--active">Non-Critical</span>
                     <span class="new-switch__option new-switch__option--inactive">Critical</span>
                 </label>
             </div>
-            <div class="route-options">
+            <div class="route-options" id="voter-selection">
                 <label class="card-headline">Who should vote?</label><br>
-                <div class="checkbox-grid">
-                    <div class="checkbox-column">
-                        <label><input type="checkbox" name="vote" value="Gandalf">Gandalf</label>
-                        <label><input type="checkbox" name="vote" value="Frodo">Frodo</label>
-                        <label><input type="checkbox" name="vote" value="Sam">Sam</label>
-                        <label><input type="checkbox" name="vote" value="Aragorn">Aragorn</label>
-                        <label><input type="checkbox" name="vote" value="Legolas">Legolas</label>
-                    </div>
-                    <div class="checkbox-column">
-                        <label><input type="checkbox" name="vote" value="Gimli">Gimli</label>
-                        <label><input type="checkbox" name="vote" value="Boromir">Boromir</label>
-                        <label><input type="checkbox" name="vote" value="Pippin">Pippin</label>
-                        <label><input type="checkbox" name="vote" value="Merry">Merry</label>
-                    </div>
-                </div>
+                <div class="checkbox-grid" id="checkbox-grid"></div>
             </div>
             <div class="route-options">
                 <label class="route-label">Option 1<br><input class="option_name input input--small" id="option1-name" type="text" placeholder="Enter Route Name"></label><br>
@@ -59,36 +50,18 @@
                 </label><br>
                 <label class="route-label">Source<br>
                     <select name="source" class="source-select" id="option1-source">
-                        <option value="Gandalf">Gandalf</option>
-                        <option value="Frodo">Frodo</option>
-                        <option value="Sam">Sam</option>
-                        <option value="Aragorn">Aragorn</option>
-                        <option value="Legolas">Legolas</option>
-                        <option value="Gimli">Gimli</option>
-                        <option value="Boromir">Boromir</option>
-                        <option value="Pippin">Pippin</option>
-                        <option value="Merry">Merry</option>
                     </select>
                 </label><br>
             </div>
             <div class="route-options">
                 <label class="route-label">Option 2<br>
-                    <input class="option_name input input--small" id="option2-name" type="text" placeholder="Route Option 2">
+                    <input class="option_name input input--small" id="option2-name" type="text" placeholder="Enter Route Name">
                 </label><br>
                 <label class="route-label">Known Risks<br>
                     <textarea class="risks-area input input--large" id="option2-risks" placeholder="Known Risks"></textarea>
                 </label><br>
                 <label class="route-label">Source<br>
                     <select name="source" class="source-select" id="option2-source">
-                        <option value="Gandalf">Gandalf</option>
-                        <option value="Frodo">Frodo</option>
-                        <option value="Sam">Sam</option>
-                        <option value="Aragorn">Aragorn</option>
-                        <option value="Legolas">Legolas</option>
-                        <option value="Gimli">Gimli</option>
-                        <option value="Boromir">Boromir</option>
-                        <option value="Pippin">Pippin</option>
-                        <option value="Merry">Merry</option>
                     </select>
                 </label><br>
             </div>
@@ -103,7 +76,7 @@
         <main class="container vote-screen">
 
             <a class="nav__back">
-                <img src="../assets/icons/back_icon.svg" alt="back">
+                <img src="../../artifact-3/assets/icons/back_icon.svg" alt="back">
                 Back
             </a>
 
@@ -111,8 +84,8 @@
                 <h1 class="vote-title" id="vote-title"></h1>
 
                 <p class="vote-meta" id="vote-init">
-                    Vote initiated by <br>
-                    3 of 9 voted
+                    Vote initiated by <span id="vote-initiator"></span><br>
+                    <span id="vote-count">0</span> of <span id="vote-total">0</span> voted
                 </p>
 
                 <p class="vote-instruction">Tap a route to select</p>
@@ -126,10 +99,10 @@
                 <textarea
                         id="reason"
                         class="input input--large reason-input"
-                        placeholder="I can deal with snow but hate Darkness"
+                        placeholder="Your reasoning (optional)"
                 ></textarea>
 
-                <a  class="btn btn--primary submit-vote" type="button" id="btn-submit-vote">
+                <a class="btn btn--primary submit-vote" type="button" id="btn-submit-vote">
                     Submit vote
                 </a>
 
@@ -138,6 +111,7 @@
 
         </main>
     </div>
+
     <div id="screen-pending" class="screen">
         <main class="container pending-screen">
 
@@ -156,12 +130,11 @@
                     Waiting for everyone to finish voting...
                 </p>
 
-                <!-- PROGRESS -->
                 <div class="pending-progress">
                     <p class="pending-count">
-                        <span class="pending-count__number" id="collected_votes">4</span>
+                        <span class="pending-count__number" id="collected_votes">0</span>
                         <span class="pending-count__label">of</span>
-                        <span class="pending-count__number" id="full_votes">9</span>
+                        <span class="pending-count__number" id="full_votes">0</span>
                         <span class="pending-count__label">voted</span>
                     </p>
 
@@ -169,13 +142,12 @@
                         <div class="pending-bar__fill"></div>
                     </div>
 
-                    <p class="route-sub-header" id="percent_complete">44% complete</p>
+                    <p class="route-sub-header" id="percent_complete">0% complete</p>
                 </div>
 
-                <!-- TIMER -->
                 <div class="pending-timer">
                     <p class="route-sub-header">Voting will end in</p>
-                    <p class="pending-timer__value" id="vote_timer">00:08:22</p>
+                    <p class="pending-timer__value" id="vote_timer">00:00:00</p>
                 </div>
 
                 <a type="button" class="btn btn--primary" id="show_results">See results</a>
@@ -232,6 +204,28 @@
             </a>
         </main>
     </div>
+<nav class="bottomnav">
+    <div class="bottomnav__inner">
+        <button class="bottomnav__button is-active" type="button">
+            <img src="../../artifact-3/assets/icons/compass_dark.svg" alt="Compass Icon">
+        </button>
+        <button class="bottomnav__button" type="button">
+            <img src="../../artifact-3/assets/icons/cube.svg" alt="Cube Icon">
+        </button>
+        <button class="bottomnav__button" type="button">
+            <img src="../../artifact-3/assets/icons/map.svg" alt="Map Icon">
+        </button>
+        <button class="bottomnav__button" type="button">
+            <img src="../../artifact-3/assets/icons/user.svg" alt="User Icon">
+        </button>
+    </div>
+</nav>
+<div id="user-switcher" class="user-switcher">
+    <p class="user-switcher__label">Playing as</p>
+    <select id="user-select"></select>
+    <p class="user-switcher__hint">Press F2 to toggle</p>
+</div>
+    <div id="current-user-badge" class="current-user-badge">Frodo</div>
 <script src="logic.js"></script>
 </body>
 </html>
