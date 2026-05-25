@@ -24,7 +24,7 @@ const state = {
         deadline: null
     },
     votes: {},          // { 'Frodo': { option, comment } }
-    result: {}          // { winner, tiebreak, tiebreakByFrodo }
+    result: {}          // { winner, tiebreak, tiebreakByFrodo, timestamp }
 };
 
 
@@ -67,8 +67,7 @@ function isVoteFinished() {
 
 function showScreen(screen) {
     state.currentScreen = screen;
-    document.querySelectorAll('.screen')
-        .forEach(s => s.classList.remove('is-active'));
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('is-active'));
     document.getElementById(screen).classList.add('is-active');
 }
 
@@ -82,8 +81,7 @@ function validateForm() {
     const option2Name = document.getElementById('option2-name').value.trim();
     const voters = Array.from(document.querySelectorAll('input[name="vote"]:checked'));
     const votersValid = state.decision.criticality === 'critical' || voters.length > 0;
-    const isValid = option1Name && option2Name && votersValid;
-    document.getElementById('btn-start-voting').disabled = !isValid;
+    document.getElementById('btn-start-voting').disabled = !(option1Name && option2Name && votersValid);
 }
 
 function collectFormData() {
@@ -111,7 +109,7 @@ function collectFormData() {
 
 
 // ============================================================
-// RENDER: VOTING SCREEN
+// RENDER FUNCTIONS
 // ============================================================
 
 function renderVotingScreen() {
@@ -120,15 +118,13 @@ function renderVotingScreen() {
     document.getElementById('vote-initiator').textContent = stats.initiator;
     document.getElementById('vote-count').textContent = stats.voted;
     document.getElementById('vote-total').textContent = stats.total;
-
-    // Reset submit button
     document.getElementById('btn-submit-vote').disabled = true;
 
     const container = document.getElementById('vote-options-cards');
     container.innerHTML = '';
     state.decision.options.forEach(option => {
         container.innerHTML += `
-            <label class="card card--voting vote-card">
+            <label class="card--voting vote-card">
                 <input type="radio" name="route" value="${option.name}">
                 <span class="vote-card__content">
                     <strong>${option.name}</strong>
@@ -139,18 +135,12 @@ function renderVotingScreen() {
         `;
     });
 
-    // Enable submit button when option is selected
     document.querySelectorAll('input[name="route"]').forEach(radio => {
         radio.addEventListener('change', () => {
             document.getElementById('btn-submit-vote').disabled = false;
         });
     });
 }
-
-
-// ============================================================
-// RENDER: PENDING SCREEN
-// ============================================================
 
 function renderPendingScreen() {
     const stats = getVoteStats();
@@ -163,29 +153,6 @@ function renderPendingScreen() {
     document.getElementById('percent_complete').textContent = stats.percent + '% complete';
     document.getElementById('vote_timer').textContent = 'Vote ends ' + state.decision.deadline.toLocaleTimeString();
 }
-
-
-// ============================================================
-// TIMER
-// ============================================================
-
-let voteInterval;
-
-function updateVoteTimer() {
-    const remainingSeconds = getTimeRemaining();
-    document.getElementById('vote_timer').textContent = formatTimeRemaining(remainingSeconds);
-
-    if (isVoteFinished()) {
-        clearInterval(voteInterval);
-        renderResultsScreen();
-        showScreen('screen-results');
-    }
-}
-
-
-// ============================================================
-// VOTE RESOLUTION
-// ============================================================
 
 function resolveVotes() {
     const counts = {};
@@ -208,18 +175,9 @@ function resolveVotes() {
             timestamp: new Date()
         };
     } else {
-        state.result = {
-            winner: firstName,
-            tiebreak: false,
-            timestamp: new Date()
-        };
+        state.result = { winner: firstName, tiebreak: false, timestamp: new Date() };
     }
 }
-
-
-// ============================================================
-// RENDER: RESULTS SCREEN
-// ============================================================
 
 function renderResultsScreen() {
     resolveVotes();
@@ -233,25 +191,20 @@ function renderResultsScreen() {
     });
 
     const winner = state.result.winner;
-
     const sortedOptions = state.decision.options.slice().sort((a, b) => {
         if (a.name === winner) return -1;
         if (b.name === winner) return 1;
         return counts[b.name] - counts[a.name];
     });
 
-    // Title
-    document.getElementById('results-title').textContent = voteFinished
-        ? 'The Path is Chosen'
-        : 'Current Standings';
+    document.getElementById('results-title').textContent = voteFinished ? 'The Path is Chosen' : 'Current Standings';
 
-    // Cards
     const container = document.getElementById('result-cards-container');
     container.innerHTML = '';
     sortedOptions.forEach(option => {
         const isWinner = option.name === winner;
         container.innerHTML += `
-            <article class="card card--results ${isWinner ? 'is-chosen' : 'is-lost'} result-card">
+            <article class="result-card ${isWinner ? 'is-chosen' : 'is-lost'}">
                 <div class="result-card__content">
                     <div class="result-card__left">
                         ${isWinner ? '<span class="result-card__badge">Chosen</span>' : ''}
@@ -266,20 +219,32 @@ function renderResultsScreen() {
         `;
     });
 
-    // Tiebreak note
     document.getElementById('result-tiebreak').textContent = state.result.tiebreak
-        ? state.result.tiebreakByFrodo
-            ? 'Tie broken by Frodo.'
-            : 'Tie – first option chosen by default.'
+        ? state.result.tiebreakByFrodo ? 'Tie broken by Frodo.' : 'Tie – first option chosen by default.'
         : '';
 
-    // Timestamp – only when finished
     document.getElementById('result-timestamp').textContent = voteFinished
         ? 'Decision recorded at ' + state.result.timestamp.toLocaleTimeString()
         : '';
 
-    // New decision button – only when finished
     document.getElementById('btn-new-decision').style.display = voteFinished ? 'block' : 'none';
+}
+
+
+// ============================================================
+// TIMER
+// ============================================================
+
+let voteInterval;
+
+function updateVoteTimer() {
+    document.getElementById('vote_timer').textContent = formatTimeRemaining(getTimeRemaining());
+
+    if (isVoteFinished()) {
+        clearInterval(voteInterval);
+        renderResultsScreen();
+        showScreen('screen-results');
+    }
 }
 
 
@@ -340,17 +305,15 @@ function populateUserSwitcher() {
 // EVENT LISTENERS
 // ============================================================
 
-// Navigation
-document.getElementById('new-vote-button')
-    .addEventListener('click', () => {
-        showScreen('screen-new-vote');
-        validateForm();
-    });
+// Empty screen
+document.getElementById('new-vote-button').addEventListener('click', () => {
+    showScreen('screen-new-vote');
+    validateForm();
+});
 
-document.getElementById('btn-back-to-empty')
-    .addEventListener('click', () => showScreen('screen-empty'));
+// New vote screen
+document.getElementById('btn-back-to-empty').addEventListener('click', () => showScreen('screen-empty'));
 
-// Criticality toggle
 const criticalityToggle = document.getElementById('criticality-toggle');
 criticalityToggle.addEventListener('change', (e) => {
     state.decision.criticality = e.target.checked ? 'critical' : 'non-critical';
@@ -358,81 +321,74 @@ criticalityToggle.addEventListener('change', (e) => {
     validateForm();
 });
 
-// Form validation on name inputs
 ['option1-name', 'option2-name'].forEach(id => {
     document.getElementById(id).addEventListener('input', validateForm);
 });
 
-// Start vote
-document.getElementById('btn-start-voting')
-    .addEventListener('click', () => {
-        collectFormData();
-        renderVotingScreen();
-        showScreen('screen-voting');
-    });
+document.getElementById('btn-start-voting').addEventListener('click', () => {
+    collectFormData();
+    renderVotingScreen();
+    showScreen('screen-voting');
+});
 
-// Submit vote
-document.getElementById('btn-submit-vote')
-    .addEventListener('click', () => {
-        const selected = document.querySelector('input[name="route"]:checked');
-        if (!selected) return;
+// Voting screen
+document.getElementById('btn-submit-vote').addEventListener('click', () => {
+    const selected = document.querySelector('input[name="route"]:checked');
+    if (!selected) return;
 
-        state.votes[state.currentUser] = {
-            option: selected.value,
-            comment: document.getElementById('reason').value.trim()
-        };
+    state.votes[state.currentUser] = {
+        option: selected.value,
+        comment: document.getElementById('reason').value.trim()
+    };
 
-        renderPendingScreen();
-        showScreen('screen-pending');
-        clearInterval(voteInterval);
-        updateVoteTimer();
-        voteInterval = setInterval(updateVoteTimer, 1000);
-    });
+    renderPendingScreen();
+    showScreen('screen-pending');
+    clearInterval(voteInterval);
+    updateVoteTimer();
+    voteInterval = setInterval(updateVoteTimer, 1000);
+});
 
-// See results
-document.getElementById('show_results')
-    .addEventListener('click', () => {
-        renderResultsScreen();
-        showScreen('screen-results');
-    });
+// Pending screen
+document.getElementById('show_results').addEventListener('click', () => {
+    renderResultsScreen();
+    showScreen('screen-results');
+});
 
-// New decision
-document.getElementById('btn-new-decision')
-    .addEventListener('click', () => {
-        state.decision = { initiator: null, criticality: 'non-critical', options: [], voters: [], deadline: null };
-        state.votes = {};
-        state.result = {};
-        showScreen('screen-new-vote');
-        validateForm();
-    });
+// Results screen
+document.getElementById('btn-new-decision').addEventListener('click', () => {
+    state.decision = { initiator: null, criticality: 'non-critical', options: [], voters: [], deadline: null };
+    state.votes = {};
+    state.result = {};
+    showScreen('screen-new-vote');
+    validateForm();
+});
 
 // User switcher (F2)
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'F2') {
-        document.getElementById('user-switcher').classList.toggle('is-visible');
+    if (e.key === 'F2') document.getElementById('user-switcher').classList.toggle('is-visible');
+});
+
+document.getElementById('user-select').addEventListener('change', (e) => {
+    state.currentUser = e.target.value;
+    document.getElementById('current-user-badge').textContent = state.currentUser;
+
+    if (state.decision.voters.length > 0) {
+        if (isVoteFinished()) {
+            renderResultsScreen();
+            showScreen('screen-results');
+        } else if (!state.decision.voters.includes(state.currentUser)) {
+            showScreen('screen-empty');
+        } else if (state.votes[state.currentUser]) {
+            renderPendingScreen();
+            showScreen('screen-pending');
+        } else {
+            renderVotingScreen();
+            showScreen('screen-voting');
+        }
     }
 });
 
-document.getElementById('user-select')
-    .addEventListener('change', (e) => {
-        state.currentUser = e.target.value;
-        document.getElementById('current-user-badge').textContent = state.currentUser;
 
-        if (state.decision.voters.length > 0) {
-            if (isVoteFinished()) {
-                renderResultsScreen();
-                showScreen('screen-results');
-            } else if (!state.decision.voters.includes(state.currentUser)) {
-                showScreen('screen-empty');
-            } else if (state.votes[state.currentUser]) {
-                renderPendingScreen();
-                showScreen('screen-pending');
-            } else {
-                renderVotingScreen();
-                showScreen('screen-voting');
-            }
-        }
-    });
 // ============================================================
 // EASTER EGG: TOM BOMBADIL MODE
 // ============================================================
@@ -450,9 +406,9 @@ function activateTomMode() {
     tomActive = true;
     document.body.style.backgroundImage = `
         linear-gradient(rgba(26,22,18,0.4), rgba(26,22,18,0.4)),
-        url('../assets/images/tom_bombadil.webp')
+        url('../../artifact-3/assets/images/tom_bombadil.webp')
     `;
-    const audio = new Audio('../assets/heydol.mp3');
+    const audio = new Audio('../../artifact-3/assets/heydol.mp3');
     audio.loop = true;
     audio.play();
     window.tomAudio = audio;
@@ -464,6 +420,7 @@ function activateTomMode() {
         }
     }, 3500);
 }
+
 function deactivateTomMode() {
     tomActive = false;
     document.body.style.backgroundImage = '';
@@ -472,6 +429,7 @@ function deactivateTomMode() {
         window.tomAudio = null;
     }
 }
+
 
 // ============================================================
 // INIT
