@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85f81f0-6d3a-4084-806e-5b359282120f" name="Changes" comment="paar fixes, inline css entfernt, meta viewport">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/artifact-3/assets/images/Background_1.webp" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-3/assets/images/Background_1.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/artifact-3/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-3/src/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artifacts/artifact-4/src/logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-4/src/logic.js" afterDir="false" />
-    </list>
+    <list default="true" id="c85f81f0-6d3a-4084-806e-5b359282120f" name="Changes" comment="paar fixes, inline css entfernt, meta viewport" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="navigationbetweenallscreens" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,7 +77,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Merging janaprobiertstuff",
+    "git-widget-placeholder": "artifact-4-logic-final",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/janakrautgartner/The-Fellowship-of-the-Code-2026/artifacts/artifact-4",
     "list.type.of.created.stylesheet": "CSS",
@@ -92,9 +87,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "terminal",
     "to.speed.mode.migration.done": "true",
-    "two.files.diff.last.used.file": "/Users/janakrautgartner/The-Fellowship-of-the-Code-2026/artifacts/artifact-3/src/style.css",
+    "two.files.diff.last.used.file": "/Users/janakrautgartner/The-Fellowship-of-the-Code-2026/artifacts/artifact-4/src/style.css",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -109,11 +104,11 @@
       <recent name="$PROJECT_DIR$/artifacts/artifact-4/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/artifacts/artifact-4/assets" />
+      <recent name="$PROJECT_DIR$/artifacts/artifact-4/assets/images" />
       <recent name="$PROJECT_DIR$/artifacts/artifact-4/src" />
       <recent name="$PROJECT_DIR$/artifacts/artifact-3/assets/icons" />
       <recent name="$PROJECT_DIR$/artifacts/artifact-3/src" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/artifacts/artifact-3" />
     </key>
   </component>
   <component name="RunManager">
