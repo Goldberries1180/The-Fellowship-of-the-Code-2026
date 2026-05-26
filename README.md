@@ -71,6 +71,11 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 
 `Each chapter has its own detailed changelog for chapter-specific updates.`
 
+### v3.2 - Logic & Design Rationale
+- streamlined all html into 1 file
+- css adapted
+- added logic.js
+
 ### v3.1 - Reading the runes
 - Added misc Folder with Code Analysis for Reading the runes
 
