@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85f81f0-6d3a-4084-806e-5b359282120f" name="Changes" comment="paar fixes, inline css entfernt, meta viewport">
-      <change beforePath="$PROJECT_DIR$/artifacts/artifact-4/artifact-4-logic-state.md" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/artifact-4/artifact-4-logic-state.md" afterDir="false" />
-    </list>
+    <list default="true" id="c85f81f0-6d3a-4084-806e-5b359282120f" name="Changes" comment="paar fixes, inline css entfernt, meta viewport" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

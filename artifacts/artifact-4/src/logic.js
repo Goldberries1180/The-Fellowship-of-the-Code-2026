@@ -421,9 +421,9 @@ function activateTomMode() {
     tomActive = true;
     document.body.style.backgroundImage = `
         linear-gradient(rgba(26,22,18,0.4), rgba(26,22,18,0.4)),
-        url('../../artifact-3/assets/images/tom_bombadil.webp')
+        url('../../artifact-4/assets/images/tom_bombadil.webp')
     `;
-    const audio = new Audio('../../artifact-3/assets/heydol.mp3');
+    const audio = new Audio('../../artifact-4/assets/heydol.mp3');
     audio.loop = true;
     audio.play();
     window.tomAudio = audio;
