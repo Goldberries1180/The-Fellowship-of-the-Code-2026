@@ -22,7 +22,9 @@ This created a highly collaborative atmosphere where ideas could immediately be 
 **Learning Outcomes**
 
 Interactive development benefits strongly from shared discussion and immediate feedback. Writing JavaScript together as a group improved understanding of logic, flow, and behaviour much more effectively than isolated implementation work.
+
 We also learned that rapid prototyping combined with continuous testing leads to faster iteration cycles and earlier discovery of usability and implementation issues.
+
 ---
 
 ## Artifact
