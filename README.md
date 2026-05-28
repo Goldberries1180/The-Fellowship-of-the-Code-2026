@@ -51,6 +51,11 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 
    [Go to Chapter III →](chapters/chapter-3-making-it-visible.md)
 
+4. Chapter IV - Bringing it to life  
+*"It is not the strength of the body that counts, but the strength of the spirit."*
+
+   [Go to Chapter IV →](chapters/chapter-4-bringing-it-to-life.md)
+
    ***
 
 # Key Features of The Fellowship Companion
