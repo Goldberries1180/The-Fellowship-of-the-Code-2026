@@ -101,13 +101,13 @@ We occasionally lost focus by following too many spontaneous ideas during develo
 - JavaScript development exposed interaction problems that were invisible in static prototypes
 - Hidden features and playful elements increased team motivation and creativity during development
 
-**Challenges**
+**Challenges**  
 - Coordinating many ideas simultaneously during collaborative coding
 - Maintaining structure while working in rapid hackathon cycles
 - Avoiding spontaneous “quick fixes” that could later reduce maintainability
 - Balancing experimentation with stable implementation
 
-**Reflections**
+**Reflections**  
 The hackathon-style workflow proved to be highly motivating and productive for interactive development tasks. Compared to the earlier parallel HTML implementation phase, the collaborative setup around a single device created more discussion, stronger shared understanding, and faster problem solving.
 
 AI worked best as an active technical companion during implementation and debugging, especially in situations where fast iteration was required. However, critical thinking and team discussion remained essential to evaluate whether suggested solutions truly fit the project architecture.
