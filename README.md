@@ -77,7 +77,7 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 `Each chapter has its own detailed changelog for chapter-specific updates.`
 
 
-### v4 - Final version
+### v.4.0 - Final version
 - Added "Chapter 4: Bringing it to live" to the Red Book of Westmarch. 
   
 ### v3.3 - Logic
@@ -92,7 +92,7 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 ### v3.1 - Reading the runes
 - Added misc Folder with Code Analysis for Reading the runes
 
-- ### v3.0 - Final Version
+### v3.0 - Final Version
 - Added "Chapter 3: Making It Visible" of the Red Book of Westmarch
   
 ### v2.5 - Links/ Navigation
