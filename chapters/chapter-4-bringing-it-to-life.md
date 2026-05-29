@@ -87,7 +87,7 @@ AI assisted during:
 - Testing was always performed manually after each implemented feature
 - The hackathon workflow was intentionally maintained throughout the development process
 
-**What would we do differently next time?**
+**What would we do differently next time?**  
 We occasionally lost focus by following too many spontaneous ideas during development. While many of those features were technically interesting and motivating, they sometimes distracted us from the original project scope. In future iterations, we would define clearer goals and explicit non-goals at the beginning of the project and regularly revisit the original requirements to reduce scope creep and maintain focus during implementation.
 
 ---
