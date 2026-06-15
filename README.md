@@ -76,6 +76,10 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 
 `Each chapter has its own detailed changelog for chapter-specific updates.`
 
+### v.4.1 - Artifact 5  
+- Added Folder for artifact 5  
+- Uploaded wireframes  
+- Created textfile  
 
 ### v.4.0 - Final version
 - Added "Chapter 4: Bringing it to live" to the Red Book of Westmarch. 
