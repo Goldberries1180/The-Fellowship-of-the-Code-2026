@@ -7,8 +7,10 @@
 ## Table of Contents
 
 - [1. Selected System Capability](#1-selected-system-capability)
-- [2. Static Interface Implementation](#2-static-interface-implementation)
-- [3. Design Rationale](#3-design-rationale)
+- [2. System-Level Flow](#2-selected-system-capability)
+- [3. System-Level Wireframe](#3-system-level-wireframe)
+- [4. Implementation Snapshot Flow](#4-implementation-snapshot-flow)
+- [5. Design Rationale](#3-design-rationale)
 
 ---
 
