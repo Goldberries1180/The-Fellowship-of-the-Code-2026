@@ -169,6 +169,10 @@ header {
     cursor: pointer;
 }
 
+.nav__back:not([hidden]) {
+    display: inline-flex;
+}
+
 .nav__back img {
     width: 24px;
     height: 24px;
@@ -942,4 +946,4 @@ input[type="checkbox"]:checked {
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
-}
+}}
