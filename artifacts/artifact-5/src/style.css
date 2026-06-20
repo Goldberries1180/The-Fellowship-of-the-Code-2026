@@ -156,7 +156,6 @@ header {
 }
 
 .nav__back {
-    display: inline-flex;
     align-items: center;
     gap: 10px;
     background: transparent;
@@ -946,7 +945,6 @@ input[type="checkbox"]:checked {
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
-}}
 }
 
 
