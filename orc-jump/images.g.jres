@@ -1,0 +1,12 @@
+{
+    "image1": {
+        "data": "hwQeAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADw/w8AAAAAAAAAAAD/DwAAf2f2AAAAAAAAAADwd/b//3b3/AAAAAAAAPD/f3f3b/f/////D/D/AAB/d3d392/3bHZP7w/v/gDwd3d3d3d/92z3/+//5P4A8HfH/3Z3d/d8973v/ub+APB3xxF2d3f2fPe77/7m/gDwd3d3d3d39nf3/+/+7P4A8Hd3d3d3Z/Z3d0/v/v//APB3d3d3d8d/d3fv7/5k/gDwd3d3d3fGf3dn7+/+xP4A8Hd3d3dnzH93xu/v/uz+APB3d3d3/P//Z8zv7/7u/gDwd3d3x0/u7v/P///+7v4AAH/GZ/bk7u7P/P/G/+b+AADwf8b85O7ub3Z3fP/u/gAAAH/2/+Tu7m93d3cP//8AAAB/D/Dk7u5vd3dnDwAAAAAA/wDwRO7u/3bH/wAAAAAAAAAAAE/k7g///wAAAAAAAAAAAADw7/4AAAAAAAAAAAAAAAAAAPAPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Orc"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
