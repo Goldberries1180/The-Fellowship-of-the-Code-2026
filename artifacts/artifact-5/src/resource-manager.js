@@ -5,11 +5,11 @@
 // --- Provisions (Food + Water → Rations) ---
 const FOOD_ITEMS = {
     lembas: { label: 'Lembas',     unit: 'pcs.' },
-    apple:  { label: 'Äpfel',      unit: 'pcs.' },
-    potato: { label: 'Kartoffeln', unit: 'pcs.' }
+    apple:  { label: 'Apples',      unit: 'pcs.' },
+    potato: { label: 'Potatoes', unit: 'pcs.' }
 };
 
-const WATER = { label: 'Wasser', unit: 'ml', step: 100 };
+const WATER = { label: 'Water', unit: 'ml', step: 100 };
 
 // One ration = what one member needs for one stretch of the journey
 const RATION = { lembas: 1, apple: 2, potato: 3, water: 300 };
@@ -17,9 +17,9 @@ const TARGET_RATIONS = 6;
 
 // --- Gear ---
 const GEAR_ITEMS = {
-    schlafsack: { label: 'Schlafsack', unit: 'pcs.', target: 3 },
-    schwert:    { label: 'Schwert',    unit: 'pcs.', target: 3 },
-    feuerholz:  { label: 'Feuerholz',  unit: 'pcs.', target: 6 }
+    schlafsack: { label: 'Sleeping bag', unit: 'pcs.', target: 3 },
+    schwert:    { label: 'Sword',    unit: 'pcs.', target: 3 },
+    feuerholz:  { label: 'Firewood',  unit: 'pcs.', target: 6 }
 };
 
 // Confidence = how ready the Fellowship is to continue
