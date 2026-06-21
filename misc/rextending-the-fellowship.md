@@ -33,4 +33,4 @@ For our low-code app, we built our own jump-and-run game using Microsoft MakeCod
 - Score system and high-score tracking
 - Game-over logic on collision with obstacles
 
-**Link:** `<https://arcade.makecode.com/S17923-21189-10164-90866>`
+**Link:** https://arcade.makecode.com/S17923-21189-10164-90866
