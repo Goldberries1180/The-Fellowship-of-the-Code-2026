@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fellowship Companion – Resource Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="screen-resource-manager" class="screen is-active">
+    <main class="container rm-page">
+        <header class="rm-header">
+            <h1 class="route-header">Resource Manager</h1>
+            <p class="route-sub-header">Track the Fellowship's supplies for the journey ahead.</p>
+        </header>
+
+        <!-- Backpack confidence -->
+        <section class="rm-confidence">
+            <div class="rm-confidence__ring">
+                <canvas id="rm-confidence-chart"></canvas>
+                <span id="rm-confidence-value" class="rm-confidence__value"></span>
+            </div>
+            <div class="rm-confidence__text">
+                <span class="rm-confidence__title">Journey Readiness</span>
+                <span class="rm-confidence__sub">How prepared the Fellowship is to continue.</span>
+            </div>
+        </section>
+
+        <!-- Rations -->
+        <section class="rm-block">
+            <h2 class="subline">Rations</h2>
+            <div class="rm-ration-summary">
+                <p class="rm-ration-headline">
+                    <span id="rm-ration-count">0</span> complete rations
+                </p>
+                <p class="rm-ration-note" id="rm-ration-bottleneck"></p>
+                <p class="rm-ration-recipe">1 ration = 1 Lembas · 2 Apples · 3 Potatoes · 300 ml Water</p>
+            </div>
+            <div class="rm-list" id="rm-provisions-list"></div>
+        </section>
+
+        <!-- Gear -->
+        <section class="rm-block">
+            <h2 class="subline">Gear</h2>
+            <div class="rm-list" id="rm-gear-list"></div>
+        </section>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="resource-manager.js"></script>
+
+</body>
+</html>
