@@ -1,6 +1,6 @@
 # The Red Book of Westmarch – Chapter V: The tale continous
 
-"*It is not the strength of the body that counts, but the strength of the spirit.*" – J.R.R. Tolkien
+"*I think I'm quite ready for another adventure.*" – Bilbo Baggins
 
 **Table of Contents**
 - [The Red Book of Westmarch - Chapter IV: Bringing it to life](#the-red-book-of-westermarch---chapter-v-the-tale-continous)
