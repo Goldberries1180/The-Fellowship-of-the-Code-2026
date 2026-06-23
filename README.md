@@ -56,6 +56,11 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 
    [Go to Chapter IV →](chapters/chapter-4-bringing-it-to-life.md)
 
+5. Chapter V - The tale continous 
+*"I think I'm quite ready for another adventure."*
+
+   [Go to Chapter IV →](chapters/chapter-5-the-tale-continues.md).
+
    ***
 
 # Key Features of The Fellowship Companion
@@ -76,7 +81,11 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 
 `Each chapter has its own detailed changelog for chapter-specific updates.`
 
-### v.4.1 - Artifact 5  
+
+### v.5.0 - Final version
+- Added "Chapter 5: The tale continous" to the Red Book of Westmarch.
+  
+- ### v.4.1 - Artifact 5  
 - Added Folder for artifact 5  
 - Uploaded wireframes  
 - Created textfile  
