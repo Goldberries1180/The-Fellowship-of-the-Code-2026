@@ -18,8 +18,8 @@ cleanly and meaningfully — weather influencing consumption was our strongest
 candidate, echoing Caradhras in SC-5 — but every option either introduced a *new*
 capability instead of deepening SC-1, or added network and error-handling
 complexity out of proportion to the value it returned. Chart.js instead changes
-how the resource state is *read*: the journey-readiness ring and the live bars
-turn a set of raw counts into an at-a-glance judgement of preparedness. That is
+how the resource state is *read*: the journey-readiness ring
+turns a set of raw counts into an at-a-glance judgement of preparedness. That is
 exactly the "make low levels visible before they become critical" intent of SC-1 —
 the extension deepens the capability rather than bolting a new one onto it.
 
@@ -109,8 +109,7 @@ strongest idea, echoing Caradhras from SC-5 — but each candidate either introd
 a new capability instead of strengthening this one, or carried network and
 error-handling cost out of proportion to its value. Chart.js instead works on data
 the system already owns: the readiness ring turns a calculated percentage into an
-at-a-glance judgement, and the resource bars make criticality legible rather than
-buried in numbers. The extension changes how the state is *read* and acted on —
+at-a-glance judgement. The extension changes how the state is *read* and acted on —
 which is exactly the "make low levels visible before they become critical" promise
 of SC-1 — so it deepens the capability instead of bolting a new one beside it.
 
