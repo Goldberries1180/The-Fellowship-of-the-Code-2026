@@ -56,7 +56,7 @@ We are The Goldberries — 5 hobbits on our great journey from the Shire to Mord
 
    [Go to Chapter IV →](chapters/chapter-4-bringing-it-to-life.md)
 
-5. Chapter V - The tale continous 
+5. Chapter V - The tale continous
 *"I think I'm quite ready for another adventure."*
 
    [Go to Chapter V →](chapters/chapter-5-the-tale-continues.md).
