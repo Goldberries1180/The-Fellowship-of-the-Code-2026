@@ -69,10 +69,9 @@ AI assisted during:
 - Supported documentation quality and consistency
 
 **Misleading**
-- Encouraged consideration of multiple extension approaches
-- Helped structure design arguments and reflections
-- Assisted in clarifying the relationship between intent, state, and interface
-- Supported documentation quality and consistency
+- Often suggested technically interesting solutions that were outside the scope of the assignment.
+- Tended to favour feature-rich extensions over solutions closely aligned with the original System Capability.
+- Sometimes proposed integrations that added complexity without providing proportional user value.
 
 **What decisions did we make consciously?**
 - We prioritised capability depth over feature quantity.
