@@ -27,7 +27,7 @@ A key aspect of this phase was recognising that system evolution is not necessar
 
 We developed:
 
-- An extended implementation of SC-1 – Inventory & Resource Tracking
+- An implementation of SC-1 – Inventory & Resource Tracking
 - Centralised inventory state management as a single source of truth
 - Derived calculations for complete rations and journey readiness
 - Threshold-based shortage detection and warning mechanisms
@@ -36,7 +36,6 @@ We developed:
 
 **Focus**
 
-- Extending an existing capability rather than introducing a new one
 - Maintaining alignment between system intent and implementation
 - Applying state-driven design principles
 - Improving information visibility and decision support
@@ -88,14 +87,12 @@ However, we would still prioritise maintaining clear capability boundaries befor
 ## Lessons Learned
 
   **Insights**
-- Extending an existing capability can create more value than introducing a completely new feature.
 - Derived information is often more useful than raw data.
 - Visualisation can significantly improve decision-making without changing the underlying data model.
 - A single source of truth simplifies consistency across multiple interface components.
 - Effective system evolution requires understanding the original intent before adding functionality.
 
 **Challenges**  
-- Identifying an extension that genuinely deepened SC-1 rather than creating a separate capability.
 - Balancing technical possibilities against project scope.
 - Avoiding unnecessary complexity introduced by external integrations.
 - Translating resource quantities into meaningful readiness indicators.
